@@ -8,7 +8,7 @@ import {
   
 } from '../data'
 
-function Landing() {
+function ExLanding() {
   return (
     <div className=' w-full relative landing-background h-screen  overflow-hidden flex items-end justify-center' >
          <div className="bg single-vimeo-background  absolute top-0 left-0 w-full h-full aspect-video pb-[56.25%">
@@ -27,7 +27,7 @@ function Landing() {
   )
 }
 
-export default Landing
+export default ExLanding
 
 
 //     <div className="w-screen h-screen relative overflow-hidden flex items-center justify-center landing-background">

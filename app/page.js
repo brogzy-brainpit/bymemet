@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import HorizontalParallax from "@/components/HorizontalParallax";
 import Images from "@/components/Images";
-import Landing from "@/components/exlanding";
+import Landing from "@/components/ExLanding";
 import Landing2 from "@/components/Landing2";
 import Landing3 from "@/components/Landing3";
 import OurExpertise from "@/components/OurExpertise";

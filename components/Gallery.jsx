@@ -2,9 +2,8 @@
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import { useScroll,motion,useTransform } from 'framer-motion'
-import GalleryCursor from '@/allCursors/GalleryCursor'
 
-function HorizontalParallax() {
+function Gallery() {
     const horzRef= useRef(null)
     const [attention,setAttention] =useState(true)
     const {scrollYProgress} =useScroll({
@@ -80,4 +79,4 @@ function HorizontalParallax() {
     )
  }
 
-export default HorizontalParallax
+export default Gallery

@@ -14,7 +14,7 @@ import {
     floating8
 } from '../data'
 
-export default function Home() {
+export default function Floating() {
 
   const plane1 = useRef(null);
   const plane2 = useRef(null);
