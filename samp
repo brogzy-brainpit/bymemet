@@ -1,0 +1,22 @@
+import UseTrackMouse from '@/Hooks/UseTrackMouse'
+import { useAmp } from 'next/amp'
+import React from 'react'
+import { motion } from 'framer-motion'
+import Image from 'next/image';
+
+function GalleryCursor({attention,img}) {
+    const cursorSize=60;
+   const {x,y}=  UseTrackMouse(cursorSize)
+  return (
+    <motion.div style={{position:"fixe",zIndex:50,y,x:x,width:cursorSize,height:cursorSize,
+        backgroundColor:attention?"blue":"red",scale:attention?1:0.2,
+         transition:"width 0.3s linear, background-color 0.3s linear, scale 0.3s linear"}} 
+    className='rounded-full flex items-center 
+    justify-center fixe top-0 left-0 '>
+        {/* <Image src={img} width={400} height={400} style={{width:cursorSize,height:cursorSize}}/> */}
+        
+        </motion.div>
+  )
+}
+
+export default GalleryCursor

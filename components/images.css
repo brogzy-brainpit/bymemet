@@ -1,0 +1,4 @@
+.grid-images{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(600px,1fr));
+}

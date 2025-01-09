@@ -1,0 +1,52 @@
+
+.nav-el{
+    cursor: pointer;
+   &:hover{
+    .nav-indicator{
+        transform: scale(1) translateX(-50%);
+    }
+   }
+    
+}
+.nav-indicator{
+    transform: scale(0) translateX(-50%);
+    transition: transform linear 0.2s;
+
+    
+}
+
+.burger-menu{
+    width: 100%;
+    /* background-color: red;  */
+    position: relative;
+    &::after,&::before{
+        content:"" ;
+        display: block;
+        width: 40%;
+        background-color: white;
+        height: 1px;
+        margin:auto;
+    position: relative;
+    transition: all 0.3s;
+
+    }
+    &::after{
+       top: -5px;
+    }
+    &::before{
+        top: 5px;
+    }
+}
+.burgerActive{
+    &::after{
+        top: -1px;
+        transform: rotate(45deg);
+        height: 2px !important;
+     }
+     &::before{
+        top: 1px;
+        transform: rotate(-45deg);
+        height: 2px !important;
+
+     } 
+}
