@@ -3,6 +3,12 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {protocol:"https",
+                hostname:"www.psd2newsletters.com",
+                port:"",
+                pathname:"/wp-content/**"
+
+            },
+            {protocol:"https",
                 port:"",
                 hostname:"images.pexels.com",
                 pathname:"/photos/**",

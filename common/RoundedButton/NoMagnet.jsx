@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React from 'react'
 import { useEffect, useRef } from 'react';
 import styles from './style.module.scss';
@@ -29,13 +29,13 @@ export default function index({children, backgroundColor="#0096a5", ...attribute
   }
 
   return (
-    <Magnetic>
-      <div className={styles.roundedButton} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
+    // <Magnetic>
+      <div  className={` dm-mono-regular ${styles.roundedButton}`} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
           {
             children
           }
         <div ref={circle} style={{backgroundColor}} className={styles.circle}></div>
       </div>
-    </Magnetic>
+    // </Magnetic>
   )
 }

@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Word2 from './Word2'
 import Rounded from '../common/RoundedButton'
+import Link from 'next/link'
 
 function RecentWorks() {
   const textRef=useRef(null)
@@ -47,7 +48,7 @@ function RecentWorks() {
 
 </h1>
 <Rounded>
-      <p className='dm-mono-regular'>More work</p>
+      <Link href="/works" className='dm-mono-regular'>More work</Link>
     </Rounded>
       {/* <button className='btn border p-4 rounded-[30px] capitalize'>my works</button> */}
       </div>

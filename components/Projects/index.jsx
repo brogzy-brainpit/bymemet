@@ -10,6 +10,7 @@ import grove from '../../assets/grove.jpg';
 import huel from '../../assets/huel.jpg';
 import tastes from '../../assets/tastes.jpg';
 import sample01 from '../../assets/sample-orbitkey.webp';
+import Link from 'next/link';
 
 
 const projects = [
@@ -94,7 +95,7 @@ export default function index() {
       }
     </div>
     <Rounded>
-      <p className='dm-mono-regular'>More work</p>
+      <Link href="/works" className='dm-mono-regular'>More work</Link>
     </Rounded>
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>

@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +17,7 @@ const geistMono = localFont({
 export const metadata = {
   title:{
     default: "memet's email dev. portfolio",
-    template:"%s - memet's emails"
+    template:"%s - bymemet"
   },
   description: "professional email design and development services. by the professional designer aka memet omar aka bokchexa",
 };
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <meta name="google-site-verification" content="eHejJnZrsBXpOeV87pCXa6f5ahGHvcKZ8B8om_R4NUM" />
-      <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
       </link>
       </head>
       {/* <style>
@@ -44,6 +45,8 @@ export default function RootLayout({ children }) {
 </style> */}
         <Nav/>
         {children}
+    <Footer/>
+
       </body>
     </html>
   );

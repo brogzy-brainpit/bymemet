@@ -7,6 +7,7 @@ import memetLogo from "@/assets/logo.svg"
 import Image from 'next/image'
 import Magnetic from '@/effects/Magnetic'
 import SlideUpText from '@/effects/SlideUpText'
+import Link from 'next/link'
 
 function Nav() {
     const [hover,setHover] =useState(false)
@@ -28,26 +29,47 @@ function Nav() {
     }
         const text ="t e x t"
   return (
-    <div className=' w-full h-[100px] fixed blur-2 bg-slate-40 justify-center items-center z-50'>
-        <div className='  z-50 container h-full w-full flex items-center justify-between'>
-     <div className='z-50 flex items-start justify-center flex-col gap-1 md:flex md:flex-row '>
+    <div className=' w-full h-[60px] backdrop-blur-lg fixed bg-slate-40 flex justify-between items-center z-50'>
+    <div className=' container'>
+       <div className='  z50 container h-full w-full flex items-center justify-between'>
+     <div className='z50 flex items-start justify-center flex-col gap-1 md:flex md:flex-row '>
+         <Link href={"/"}>
         <Image src={memetLogo} style={{width:"120px",translate:"-10%"}}/>
-
+        </Link>
        <span style={{opacity:0.37}} className=' flex justify-end  h-full dm-mono-regular md:pl-[35px] pl-[0px]'>
         
         <SlideUpText text={"(email designer & developer)"}  y='0%'  className={`relativ text-par  inline-flex overflow-hidden  text-[16px] md:text-[16px]  leading-[1] text-customColor `}  fontSize={96} clamp={false}/>
        </span>
      </div>
-     <Magnetic className="z-50">
-     <div className='bg-white rounded-full z-50 w-[60px] h-[60px] flex justify-center items-center' onClick={()=>{setBurgerMenu(!burgerMenu)}} >
+     <div className=' gap-8 hidden md:flex'>
+             <Link href={'/works'}>
+            <p className='dm-mono-regular'>Works</p>
+             </Link>
+              <Link href={'/about'}>
+            <p className='dm-mono-regular'>About</p>
+              </Link>
+               <Link href={'/blogs'}>
+            <p className='dm-mono-regular'>Blogs</p>
+               </Link>
+                <Link href={'/contact'}>
+            <p className='dm-mono-regular'>Contact</p>
+                </Link>
+        </div>
+        <div className=' gap-8 inline-block md:hidden'>
+        <Magnetic>
+     <div className='cursor-pointer bg-white rounded-full z-50 w-[45px] h-[45px] flex justify-center items-center' onClick={()=>{setBurgerMenu(!burgerMenu)}} >
         <div className={`burger-menu ${burgerMenu?"burgerActive":null}`}>
         </div>
 
      </div>
-     </Magnetic>
+        </Magnetic>
+</div>
 
         </div>
+       
         <MobileMenu burgerMenu={burgerMenu} setBurgerMenu={setBurgerMenu}/>
+
+    </div>
         </div>
   )
 }
@@ -85,17 +107,35 @@ const MobileMenu=({burgerMenu, setBurgerMenu})=>{
     
         },
     }
-    return <motion.div variants={menuSlide} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" className=' z-40 pt-[10vh] fixed items-center justify-center w-[100%] top-0 left-0 h-screen bg-black'> 
+    return <motion.div variants={menuSlide} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" className='z-40 pt-[10vh] fixed items-center justify-center w-[100%] top-0 left-0 h-screen bg-black'> 
+
+<div className='relative container h-full w-full'>
+<div className='hidden md:flex cursor-pointer absolute top-0 right-10 font-custom text-[40px] text-red-600' onClick={(e)=>{setBurgerMenu(false)}} >
+    <Magnetic>
+x
+ </Magnetic>
+</div>
+
 <div className='pt-[20px] flex justify-center items-center flex-col  h-full'>
   <Magnetic>
+    <Link href={'/works'}>
    <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}}  className='dm-mono-regular text-heading2 font-bold uppercase heading-hover'>works</motion.h1> 
+    </Link>
   </Magnetic>
   <Magnetic>
+  <Link href={"/about"}>
    <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' dm-mono-regular text-heading2 font-bold uppercase heading-hover'>About</motion.h1> 
+  </Link>
   </Magnetic>
   <Magnetic>
-
+    <Link href={"/blogs"}>
+   <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' dm-mono-regular text-heading2 font-bold uppercase heading-hover'>Blogs</motion.h1> 
+    </Link>
+  </Magnetic>
+  <Magnetic>
+  <Link href={"/contact"}>
    <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className='dm-mono-regular text-heading2 font-bold uppercase heading-hover'>contact</motion.h1> 
+  </Link>
   </Magnetic>
 
 <div className='flex pt-10 gap-[3vw]'>
@@ -114,6 +154,8 @@ const MobileMenu=({burgerMenu, setBurgerMenu})=>{
 
 </div>
 </div>
+</div>
+
     </motion.div>
 }
 export default Nav

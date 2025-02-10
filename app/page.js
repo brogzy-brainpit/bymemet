@@ -1,5 +1,4 @@
 'use client'
-import Footer from "@/components/Footer";
 // import Gallery from "@/components/Gallery";
 // import HorizontalParallax from "@/components/HorizontalParallax";
 // import Images from "@/components/Images";
@@ -19,6 +18,8 @@ import SmoothScroll from "@/effects/SmoothScroll";
 import { AnimatePresence } from "framer-motion";
 // import Image from "next/image";
 import { useEffect, useState } from "react";
+import ReviewShow from '@/app/_components/Reviews';
+import Compatibility from "./_components/Compatibility";
 
 export default function Home() {
   const [isLoading,setIsLoading]=useState(true)
@@ -35,17 +36,17 @@ export default function Home() {
   },[])
   return (
    <div className="relativ">
-    <AnimatePresence mode="wait">
+    {/* <AnimatePresence mode="wait">
     {isLoading &&< Preloader/>}
- 
-    </AnimatePresence>
+    </AnimatePresence> */}
     <SmoothScroll>
    {/* <Landing/> */}
    <Landing3 inView={inView}/>
+    <SlidingImages/>
    <Services/>
    <Projects/>
    <RecentWorks/>
-   <Parallax/>
+   {/* <Parallax/> */}
     {/* <Custom/> */}
    {/* <TwoImages/> */}
    {/* <Images/> */}
@@ -53,9 +54,9 @@ export default function Home() {
     <Texter/>
     {/* <OurExpertise/> */}
     {/* <Gallery/> */}
-    <SlidingImages/>
+<ReviewShow/>
+<Compatibility/>
     {/* <HorizontalParallax/> */}
-    <Footer/>
     </SmoothScroll>
     {/* <div className="h-[100vh]"></div> */}
 

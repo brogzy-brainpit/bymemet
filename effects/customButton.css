@@ -194,11 +194,11 @@
     }
     80% {
       clip-path: var(--slice-5);
-      transform: translate(20px, -10px);
+      transform: translate(5px, 0px);
     }
     90% {
       clip-path: var(--slice-1);
-      transform: translate(-10px, 0px);
+      transform: translate(0px, -5px);
     }
     100% {
       clip-path: var(--slice-1);
@@ -265,12 +265,12 @@
     70% {
         text-shadow: -3px -3px 0px #9507e2, 3px 3px 0px #0a4b50c6;
         opacity: 0.1;
-      transform: translate(-10px, 10px);
+      transform: translate(-5px, 5px);
     }
     80% {
         text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
         opacity: 0.65;
-      transform: translate(20px, -10px);
+      transform: translate(-5px, 0px);
     }
     90% {
         text-shadow: -3px -3px 0px #f8ab05b7, 3px 3px 0px #0475d8;

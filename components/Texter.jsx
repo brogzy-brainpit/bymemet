@@ -2,6 +2,7 @@ import SlideUpText from '@/effects/SlideUpText'
 import { useInView,motion } from 'framer-motion'
 import React, { useRef } from 'react'
 import Rounded from "../common/RoundedButton";
+import Link from 'next/link';
 
 function Texter() {
 
@@ -17,7 +18,8 @@ function Texter() {
             
             <div className='flex-[2]'>
                <Rounded>
-                          <p className='dm-mono-regular'>More work</p>
+                          <Link href="/contact"  className='dm-mono-regular'>lets talk!</Link> 
+
                         </Rounded>
               </div>
            {/* <button className='flex-[2] text-[#c8c8c8] m-3 btn px-5 py-5 border border-emerald-100 rounded-full capitalize'>about</button> */}

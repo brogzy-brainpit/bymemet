@@ -9,16 +9,18 @@
     justify-content: center;
     padding: 8px 20px 15px 20px;
     width: fit-content;
+    // font-family: dm-mono-regular;
 
-    p{
+    p, a{
         position: relative;
-        z-index: 1;
+        z-index: 4;
         transition: color 0.4s linear;
     }
 
     &:hover{
-        p{
+        p,a{
             color: white;
+            z-index: 4;
         }
     }
 }
