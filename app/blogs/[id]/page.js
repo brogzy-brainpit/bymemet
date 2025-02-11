@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       site: "@YourTwitterHandle",
       title,
       description,
-      images: [{url:thumbnail}],
+      images: [{url:thumbnail,width:1200,height:630,alt:`image for ${title}`}],
     },
   }
 }
