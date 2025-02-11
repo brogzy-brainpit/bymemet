@@ -1,4 +1,4 @@
-import axios, { base } from '@/axios'
+import axios, { base, baseApi } from '@/axios'
 import React from 'react'
 import Link from 'next/link'
 import BlogContent from './BlogContent';
@@ -12,8 +12,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const param = (await params).id
   const id = "66b6151748ee1c92617b2712";
   // fetch data
-  const product = await fetch(`http://localhost:5000/api/v1/blogs/${id}/blogs/get/${param}`).then((res) => res.json()).catch(err=>{console.log(err)})
- console.log(product?.user.blogs[0])
+  const product = await fetch(`${baseApi}/blogs/${id}/blogs/get/${param}`).then((res) => res.json()).catch(err=>{console.log(err)})
  const title= product?.user.blogs[0].topic
  const description= product?.user.blogs[0].description2
  const thumbnail= product?.user.blogs[0].thumbnail
@@ -29,7 +28,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       title,
       description,
       url:`${base}/blogs/${snug}`,
-      images: [thumbnail],
+      images: [{url:thumbnail}],
       type: "website",
     },
     twitter: {
@@ -62,10 +61,10 @@ async function getPublished(params) {
     const id = "66b6151748ee1c92617b2712";
     try {
 
-      const res = await axios.get(`/blogs/${id}/blogs/get/${params}`);
-      
+      const res = await fetch(`${baseApi}/blogs/${id}/blogs/get/${params}`).then((res) => res.json()).catch(err=>{console.log(err)})
+      // product?.user.blogs[0].topic
 
-      const allBlogs = res?.data;
+      const allBlogs = res;
       return allBlogs?.user?.blogs || []; // Return blogs or an empty array
     } catch (err) {
       console.error("Error fetching blogs:", err.message);
@@ -103,27 +102,28 @@ async function page({params}) {
       {/* <p className='dm-mono-regular text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p> */}
       </div>
     
-      <div className="p-4 w-full">
+      <div className="p-2 w-full">
       <div   className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4`}>
 
         <div className={`bg-[#0F172A] rounded-[20px]  lg:col-span-4 flex  flex-col relative`} >
          
         <div className='border-[2px] border-zinc-500 p-[4px] rounded-[20px]'>
-              <img src={blog[0]?.thumbnail} width={400} height={400} className=' rounded-t-[20px] object-cover w-full'/>
+              <img src={blog[0]?.thumbnail} width={400} height={300} className='md:h-[350px] h-[300px] rounded-t-[20px] object-cover w-full'/>
             </div>
             {/* lorem20 abeh fgf f wfwfgw hwgfg wfwhfwfgwg wifg wifgiuow */}
          <BlogContent createdAt={blog[0].createdAt} img={blog[0].avatar}  body={blog[0].content}/>
             <div className=' w-full py-[60px] md:px-[10px] px-[0px] relative dm-mono-regular mt-[-40px] z-[0] rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
             <p className='dm-mono-regular text-[20px] pb-[30px]'> contents related to {blog[0]?.category}</p>
           <div className='flex flex-wrap gap-2 w-full justify-center'>
-          {allblog?.map(({topic,thumbnail},index)=>{
+          {allblog?.map(({topic,thumbnail,slug},index)=>{
             return (
+            <Link href={`/blogs/${slug}`}>
               <div key={index} className='flex flex-wrap w-[47%] md:w-[190px] h-auto rounded-2xl overflow-hidden '>
                 <div className='relative w-full'>
                   <img className='w-full object-cover' src={thumbnail}/>
                   <p className='w-full text-[11px] p-[10px] absolute top-[0px] bg-[rgba(0,0,0,0.72)] h-full flex items-end'>{topic}</p>
                 </div>
-                </div>
+                </div></Link>
             )
           })}
           </div>

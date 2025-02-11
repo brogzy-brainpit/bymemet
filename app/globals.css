@@ -349,7 +349,7 @@ body {
   max-width: 1200px;
   width: 100%;
   /* background-color: aqua; */
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0.3rem;
   --bs-gutter-y: 0;
   padding-left: calc(var(--bs-gutter-x)* .5);
   padding-right: calc(var(--bs-gutter-x)* .5);

@@ -141,7 +141,7 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
   <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"   className='w-[60%] flex justify-start overflow-hidden rounded-[20px]'>
   <div className='block pb-2 bg-slat-300 '>
   <span class="block w-[10vw]">
-    <svg stroke="currentColor" fill="none" stroke-width="1.25" viewBox="6 6 12 12" stroke-linecap="round" stroke-linejoin="round" class="m-0 size-[26px] p-0 md:size-7" color="#8C8C73" style={{color:"#8C8C73"}} height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
+    <svg stroke="currentColor" fill="none" strokeWidth="1.25" viewBox="6 6 12 12" strokeLinecap="round" strokeLinejoin="round" className="m-0 size-[26px] p-0 md:size-7" color="#8C8C73" style={{color:"#8C8C73"}} height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
     </span>
   </div>
     </motion.div>
@@ -161,7 +161,7 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
      {/* <Magnetic className="flex justify-center">
      </Magnetic> */}
     <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"   className='w-[60%] flex justify-center overflow-hidden rounded-[20px]'>
-      <Image  src={ele} className='object-cover' />
+      <Image alt='memet oumar aka bokchexa' src={ele} className='object-cover' />
     </motion.div>
   </div>
   <div className=' bg-slate-80 w-full breaker-child flex items-end'>
@@ -201,7 +201,7 @@ function SlideUpSolo({slideUp,children,inView,text,once,fontSize,duration=0.2,de
     <p ref={textRef} style={{gap}} className=' flex-wrap w-0%]  m-0 flex gap-2 bg-slate-40'>
         {text.split(" ").map((p,index)=>{
         // return <span {...props}  className={`relativ ${clamp?"text-para":null} ${...props} inline-flex overflow-hidden md:text-[${fontSize}px] text-[10vw] leading-[1] text-customColor font-custom2`} >
-        return <span {...props}   >
+        return <span key={index} {...props}   >
 
             <motion.span custom={index} variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"  className=''>{p}</motion.span >
         </span>

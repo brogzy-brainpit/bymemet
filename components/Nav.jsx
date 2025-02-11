@@ -34,7 +34,7 @@ function Nav() {
        <div className='  z50 container h-full w-full flex items-center justify-between'>
      <div className='z50 flex items-start justify-center flex-col gap-1 md:flex md:flex-row '>
          <Link href={"/"}>
-        <Image src={memetLogo} style={{width:"120px",translate:"-10%"}}/>
+        <Image alt='bymemet logo' src={memetLogo} style={{width:"120px",translate:"-10%"}}/>
         </Link>
        <span style={{opacity:0.37}} className=' flex justify-end  h-full dm-mono-regular md:pl-[35px] pl-[0px]'>
         

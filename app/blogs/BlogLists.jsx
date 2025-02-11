@@ -62,8 +62,11 @@ function BlogLists({blogs}) {
     <div className={`lg:col-span-4 flex gap-2 flex-col`} >
             <h2 style={{borderLeft:"3px gray solid"}} className='dm-mono-regular text-[30px] px-4 mb-4'>All blogs</h2>
             <div className='flex gap-2 items-center justify-center flex-wrap mb-3'>
-<NoMagnet onClick={()=>{filterBlogs("all")}}>
+            <NoMagnet onClick={()=>{filterBlogs("all")}}>
         <p className='dm-mono-regular' >All</p>
+     </NoMagnet>
+     <NoMagnet onClick={()=>{filterBlogs("tips")}}>
+        <p className='dm-mono-regular' >Tips</p>
      </NoMagnet>
      <NoMagnet onClick={()=>{filterBlogs("latest")}}>
         <p className='dm-mono-regular' >latest</p>

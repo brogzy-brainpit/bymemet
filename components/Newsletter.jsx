@@ -59,7 +59,7 @@ function Newsletter() {
   
   }
   return (
-    <div className='form-control gap-2 z-[9999]'>
+    <div className='container form-control gap-2 z-[9999]'>
       <p className='dm-mono-regular text-[20px] font-bold py-2 capitalize'>subscribe for updates</p>
     <input value={name} onChange={(e)=>setName(e.target.value)} className='text-[#000] input capitalize dm-mono-regular' placeholder='first name'/> 
     <input value={last} onChange={(e)=>setLast(e.target.value)} className='text-[#000] input capitalize dm-mono-regular'  placeholder='last name (optional)'/> 

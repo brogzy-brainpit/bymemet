@@ -49,11 +49,11 @@ function BlogContent({body,img,createdAt}) {
       }
        
   return (
-    <div className=' py-[60px] md:px-[10px] px-[0px] relative dm-mono-regular mt-[-40px] blogContent z-1 rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
+    <div className=' py-[60px] md:px-[10px] px-2 relative dm-mono-regular mt-[-40px] blogContent z-1 rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
        <div class="entry-meta">
 	<a class="entry-author dm-mono-regular text-[13px]" href="https://mailbakery.com/blog/author/iveta/">memet O.</a>
 	<a class="entry-author-image" href="https://mailbakery.com/blog/author/iveta/">
-		<img alt="blogs published by memet" src={img} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src="https://mailbakery.s3.amazonaws.com/wp-content/uploads/2017/04/27071827/Iveta.jpg" decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>	</a>
+		<img alt="blogs published by memet" src={img} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src={img} decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>	</a>
 	<span class="entry-date dm-mono-regular text-[13px]">{moment().from(createdAt,true)} ago</span>
 </div>
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={{

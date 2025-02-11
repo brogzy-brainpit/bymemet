@@ -20,8 +20,8 @@ export default function TestimonialsCarousel() {
 
     return (
         <Slider {...settings}>
-           {reviews.map((e)=>{
-            return  <div className="bg-[transparent]">
+           {reviews.map((e,index)=>{
+            return  <div key={index} className="bg-[transparent]">
             <div  className="flex p-4">
             <div className="pr-1">
             <svg width="0" height="0">
@@ -39,8 +39,8 @@ export default function TestimonialsCarousel() {
                 {e.para}
                 </p>
                 <div style={{display:"flex"}}>
-                    {Array(5).fill().map((e)=>{
-                      return <Star sx={{ color: '#1183AE', fontSize: 20 }}/>
+                    {Array(5).fill().map((e,index)=>{
+                      return <Star key={index} sx={{ color: '#1183AE', fontSize: 20 }}/>
                       // return <StarHalfOutlined sx={{ color: 'blue', fontSize: 18 }}/>
                     })}
                 </div>

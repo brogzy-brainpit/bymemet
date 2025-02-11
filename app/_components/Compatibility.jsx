@@ -37,7 +37,7 @@ function Compatibility() {
   return (
     <div className='container grid-imgs py-6'>
         <h2 className= 'dm-mono-regular t-large t-bold t-align-center t-padding-v capitalize'>{"my templates compatibility"}</h2>
-        <p className='dm-mono-regular t-medium t-align-center'>{"our email templates are compatible with Mailchimp, Campaign Monitor + 28 Email Service Providers. Simply build integrate our email template to your preferred Email Service Provider."}</p>
+        <p className='dm-mono-regular t-medium t-align-center'>{"my email templates are compatible with Klaviyo, Mailchimp, Campaign Monitor + 28 Email Service Providers. Simply integrate my email template to your preferred Email Service Provider."}</p>
             {compImg.map((e,index)=>{
                 return (
                   <img key={index} src={e.img} alt='compatible-ESP-image' className="w-[80px]"/>

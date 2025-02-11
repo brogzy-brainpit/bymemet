@@ -1,4 +1,4 @@
-import axios from '@/axios'
+import axios, { base } from '@/axios'
 import Link from 'next/link'
 // import moment from 'moment'
 // import Pagination from '@/components/Pagination';
@@ -6,6 +6,29 @@ import BlogLists from './BlogLists';
 import {Instagram, WhatsApp, X } from '@mui/icons-material'
 import Newsletter from '@/components/Newsletter';
 
+
+export async function generateMetadata({ params, searchParams }, parent) {
+ const title="Email Marketing Best Practices, HTML Email Design & Expert Tips | Your Guide to Better Email Campaigns"
+ const description="Discover proven strategies, best practices, and expert tips on email marketing, HTML email development, and eye-catching email design. Improve your email campaigns with actionable insights and enhance your skills to engage and convert your audience effectively."; 
+ return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url:`${base}/blogs/`,
+      // images: [{url:thumbnail}],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: `${base}/blogs`,
+      title,
+      description,
+      // images: [{url:thumbnail}],
+    },
+  }
+}
 async function getPublished() {
   const id = "66b6151748ee1c92617b2712";
   try {
@@ -42,7 +65,7 @@ let blogs = [];
       <p className='dm-mono-regular text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p>
       </div>
     
-      <div className="p-4 w-full">
+      <div className="p-2 w-full">
         {/* buttons */}
         {/* buttons */}
 {/* <div className='flex gap-2 items-center justify-center flex-wrap mb-3'>
@@ -77,7 +100,7 @@ let blogs = [];
 
             <div className='flex gap-3 flex-col w-[100%] justify-center items-center'>
                   <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
-                <div className='p-[10px]  flex flex-wrap items-center  w-[80%] bg-[#0F172A] rounded-[14px] overflow-hidden'>
+                <div className='p-[10px]  flex flex-wrap items-center  w-[95%] bg-[#0F172A] rounded-[14px] overflow-hidden'>
                     {tags.map((e,index)=>{
                       return (
                         <span key={index} className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
@@ -91,7 +114,7 @@ let blogs = [];
 
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
                   <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
-                <div className='flex flex-col gap-5 items-center w-[80%] bg-[#0F172A] rounded-[14px] p-4'>
+                <div className='flex flex-col gap-5 items-center w-[95%] bg-[#0F172A] rounded-[14px] p-4'>
                    <p className='dm-mono-regular'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
                    <div className='flex gap-4'>
                     <Link target='blank' href={"https://x.com/bok_cheza"}>
@@ -115,8 +138,7 @@ let blogs = [];
                 </div>
 </div>
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
-                  <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
-                <div className='flex flex-col gap-5 items-center w-[80%] bg-[#0F172A] rounded-[14px] p-4'>
+                <div className='flex flex-col gap-5 items-center w-[95%] bg-[#0F172A] rounded-[14px] p-4'>
                    <Newsletter/>
                 </div>
 </div>

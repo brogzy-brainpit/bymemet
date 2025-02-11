@@ -6,6 +6,8 @@ const instance=axios.create({
 })
 
 export const base="https://bymemet.vercel.app"
+export const baseApi="https://inboxified.vercel.app/api/v1"
+
 // export const base="http://localhost:5173"
 export default instance
 
