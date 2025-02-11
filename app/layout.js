@@ -19,7 +19,7 @@ export const metadata = {
     default: "memet's email dev. portfolio",
     template:"%s - bymemet"
   },
-  description: "professional email design and development services. by the professional designer aka memet omar aka bokchexa",
+  description: "professional email design and development services. by the professional designer Memet Oumar aka Bokchexa",
 };
 
 export default function RootLayout({ children }) {

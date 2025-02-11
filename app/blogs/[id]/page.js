@@ -29,6 +29,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       description,
       url:`${base}/blogs/${snug}`,
       images: [{url:thumbnail}],
+      // images: [{url: `open-graph/?slug=${slug}`}],
       type: "website",
     },
     twitter: {
@@ -36,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       site: "@YourTwitterHandle",
       title,
       description,
-      images: [thumbnail],
+      images: [{url:thumbnail}],
     },
   }
 }

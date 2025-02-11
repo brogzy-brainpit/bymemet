@@ -56,7 +56,7 @@ let blogs = [];
  
     
   
-  const tags=["email-design-master-class","email-design-tips",'email-design-trends-2025',"html-email-tips",'learn-html-email','learn-email-trends','awward-emails','not-just-emails','expert-email-design']
+  const tags=["email-design-master-class","email-love","email-design-tips",'email-design-trends-2025',"html-email-tips",'learn-html-email','learn-email-trends','awwward-emails','not-just-emails','expert-email-design']
   return (
     <div className='container relative h-[100v flex-col w-full  font-custom4 flex items-center py-[20vh] '>
     {/* <div className=" container sticky top-0 h-full flex flex-col  justify-center"> */}
