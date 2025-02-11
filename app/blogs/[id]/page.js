@@ -34,7 +34,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     },
     twitter: {
       card: "summary_large_image",
-      site: "@YourTwitterHandle",
+      site: "@bok_cheza",
       title,
       description,
       images: [{url:thumbnail,width:1200,height:630,alt:`image for ${title}`}],
@@ -118,13 +118,12 @@ async function page({params}) {
           <div className='flex flex-wrap gap-2 w-full justify-center'>
           {allblog?.map(({topic,thumbnail,slug},index)=>{
             return (
-            <Link href={`/blogs/${slug}`}>
-              <div key={index} className='flex flex-wrap w-[47%] md:w-[190px] h-auto rounded-2xl overflow-hidden '>
+              <Link href={`/blogs/${slug}`} key={index} className='flex flex-wrap w-[47%] md:w-[190px] rounded-2xl overflow-hidden '>
                 <div className='relative w-full'>
                   <img className='w-full object-cover' src={thumbnail}/>
                   <p className='w-full text-[11px] p-[10px] absolute top-[0px] bg-[rgba(0,0,0,0.72)] h-full flex items-end'>{topic}</p>
                 </div>
-                </div></Link>
+                </Link>
             )
           })}
           </div>

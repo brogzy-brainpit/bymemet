@@ -22,7 +22,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     },
     twitter: {
       card: "summary_large_image",
-      site: `${base}/blogs`,
+      site: `@bok_cheza`,
       title,
       description,
       // images: [{url:thumbnail}],

@@ -9,12 +9,28 @@ import {
  
 } from '../../data'
 import Compatibility from '../_components/Compatibility'
+import { base } from '@/axios'
 // import ReviewShow from '../_components/Reviews'
 export const metadata = {
 title:{
   default: "about memet Oumar",   
 },
 description: "get to know your unique email designer & developer",
+openGraph: {
+      title:"about memet Oumar",
+      description:"get to know your unique email designer & developer",
+      url:`${base}/about`,
+      // images: [{url:thumbnail}],
+      // images: [{url: `open-graph/?slug=${slug}`}],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@bok_cheza",
+      title:"about memet Oumar",
+      description:"get to know your unique email designer & developer",
+      // images: [{url:thumbnail,width:1200,height:630,alt:`image for ${title}`}],
+    },
 };
 function AboutPage() {
   return (
