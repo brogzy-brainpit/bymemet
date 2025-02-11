@@ -10,6 +10,7 @@ import {
 } from '../../data'
 import Compatibility from '../_components/Compatibility'
 import { base } from '@/axios'
+
 // import ReviewShow from '../_components/Reviews'
 export const metadata = {
 title:{
@@ -20,7 +21,7 @@ openGraph: {
       title:"about memet Oumar",
       description:"get to know your unique email designer & developer",
       url:`${base}/about`,
-      // images: [{url:thumbnail}],
+      images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png'}],
       // images: [{url: `open-graph/?slug=${slug}`}],
       type: "website",
     },
@@ -29,7 +30,7 @@ openGraph: {
       site: "@bok_cheza",
       title:"about memet Oumar",
       description:"get to know your unique email designer & developer",
-      // images: [{url:thumbnail,width:1200,height:630,alt:`image for ${title}`}],
+      images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png',width:1200,height:630,alt:`image for memet logo`}],
     },
 };
 function AboutPage() {

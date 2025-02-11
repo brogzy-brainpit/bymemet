@@ -2,7 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import {logo2} from "@/assets/logo2.png"
+
+import { base } from "@/axios";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,13 +21,12 @@ export const metadata = {
     default: "memet's email dev. portfolio",
     template:"%s - bymemet"
   },
-  images: [{url:logo2}],
   description: "professional email design and development services. by the professional designer Memet Oumar aka Bokchexa",
   openGraph: {
         title:"memet's email dev. portfolio",
         description:"professional email design and development services. by the professional designer Memet Oumar aka Bokchexa",
         url:`${base}/`,
-        images: [{url:logo2}],
+        images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png'}],
         // images: [{url: `open-graph/?slug=${slug}`}],
         type: "website",
       },
@@ -35,7 +35,7 @@ export const metadata = {
         site: "@bok_cheza",
         title:"memet's email dev. portfolio",
         description:"professional email design and development services",
-        images: [{url:logo2,width:1200,height:630,alt:`image for memet logo`}],
+        images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png',width:1200,height:630,alt:`image for memet logo`}],
       },
 };
 

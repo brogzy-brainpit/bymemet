@@ -1,4 +1,4 @@
-import axios from '@/axios'
+import axios, { base } from '@/axios'
 
 
 
@@ -17,6 +17,25 @@ async function getPublished() {
       throw new Error("Failed to fetch blogs!!!");
     }
   }
+  export const metadata = {
+    title:"my email dev. work samples",
+    description: "Feel free to reach out through contact form or find my contact information below. Your feedback, questions, and suggestions are important to me as i strive to provide exceptional email development services to your business.",
+     openGraph: {
+           title:"my email dev. work samples",
+           description:"explore the kind of emails i designed and developed for my clients and agencies.",
+           url:`${base}/works`,
+           images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png'}],
+           // images: [{url: `open-graph/?slug=${slug}`}],
+           type: "website",
+         },
+         twitter: {
+           card: "summary_large_image",
+           site: "@bok_cheza",
+           title:"my email dev. work samples",
+           description:"explore the kind of emails i designed and developed for my clients and agencies.",
+           images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1739285313/olrejjgbkfkyo8buiigu.png',width:1200,height:630,alt:`image for memet logo`}],
+         },
+  };
   
   async function page() {
   let templates = [];
