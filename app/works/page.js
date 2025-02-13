@@ -1,4 +1,5 @@
 import axios, { base } from '@/axios'
+import PageHeader from '../_components/PageHeader';
 
 
 
@@ -18,8 +19,8 @@ async function getPublished() {
     }
   }
   export const metadata = {
-    title:"my email dev. work samples",
-    description: "Feel free to reach out through contact form or find my contact information below. Your feedback, questions, and suggestions are important to me as i strive to provide exceptional email development services to your business.",
+    title:"my email work samples",
+    description: "explore the kind of emails i designed and developed for my clients and agencies.",
      openGraph: {
            title:"my email dev. work samples",
            description:"explore the kind of emails i designed and developed for my clients and agencies.",
@@ -48,6 +49,7 @@ async function getPublished() {
     }
     return (
         <div className='container relative h-[100v flex-col  w-full font-custom4 flex items-center py-[20vh] '>
+          <PageHeader page={"works"} title01={"portfolio"} title02={"explore samples"}/>
         <div className='flex gap-3 flex-wrap items-center justify-center '>
 
         {templates.map(({img,name,tempId,newContent},index)=>{

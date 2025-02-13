@@ -6,6 +6,7 @@ import nodemailer from "nodemailer"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
+import { base } from '@/axios'
 export const metadata = {
   title:{
     default: "contact memet Oumar",   
@@ -102,13 +103,14 @@ async function submit(formData){
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <PhoneAndroid sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
-            +2349063260237
+            
+            <Link href="tel:+2349063260237">+2349063260237</Link>
             </div>
             <div className='py-2 gap-2 flex items-center dm-mono-regular'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <Email sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
-            memetoumar@gmail.com
+            <Link href="mailto:memetoumar@gmail.com">memetoumar@gmail.com</Link>
             </div>
             <div className='py-2 gap-2 flex items-center dm-mono-regular'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>

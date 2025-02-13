@@ -131,7 +131,7 @@
   scrollbar-width: 2px;
 }
 body {
-  cursor: wait;
+  /* cursor: wait; */
   color: var(--primary-color);
   background:#c4bebe;
   background:#000000;
