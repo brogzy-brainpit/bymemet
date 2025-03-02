@@ -76,18 +76,18 @@ body {
     clip-path: polygon(10% 10%, 90% 0%, 100% 100%, 0% 90%);
   }
 }
-@font-face {
+/* @font-face {
   font-family: 'ConthraxBold';
   src: url('./fonts/Fontspring-DEMO-conthrax-bd.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-}
-/* @font-face {
+} */
+@font-face {
   font-family: 'ConthraxBold';
-  src:url('https://brogzy-brainpit.github.io/fonts/Bolmand-Oblique.woff')  format('woff');
+  src:url('https://brogzy-brainpit.github.io/fonts/Bolmond/Bolmand-Regular.woff')  format('woff');
   font-weight: normal;
   font-style: normal;
-} */
+}
 @font-face {
   font-family: 'BriceBold';
   src: url('./fonts/Fontspring-DEMO-brice-boldexpanded.otf') format('opentype');
