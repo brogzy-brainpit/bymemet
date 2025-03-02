@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inconsolata:wght@200..900&display=swap');
 </style> */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`body-noise ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       {/* <style>
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');

@@ -131,12 +131,12 @@ async function page({params}) {
             </div>
           </div>
 
-        <div className={`sticky top-[60px] min-h-screen h-fit overflow-hidden border rounded-lg shadow-md lg:col-span-2`}>
+        <div className={` bg-[#0F172A] sticky top-[60px] min-h-screen h-fit overflow-hidden border-[2px] border-zinc-500 rounded-lg shadow-md lg:col-span-2`}>
             <div  className='h-full w-full flex  flex-col'>
 
 <div className='flex  gap-3 flex-col w-[100%] justify-center items-center my-4'>
                   <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
-                <div className='relative mt-4 flex flex-col gap-5 items-center w-[80%] bg-[#0F172A] rounded-[14px] p-4 pt-[20px]'>
+                <div className='relative mt-4 flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] p-4 pt-[20px]'>
                      <div class="entry">
                     <a class="entry-author-image">
                       <img alt="blogs published by memet" src={blog[0]?.avatar} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src="https://mailbakery.s3.amazonaws.com/wp-content/uploads/2017/04/27071827/Iveta.jpg" decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>
@@ -165,13 +165,13 @@ async function page({params}) {
                 </div>
 </div>
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
-                <div className='flex flex-col gap-5 items-center w-[80%] bg-[#0F172A] rounded-[14px] p-4'>
+                <div className='flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] p-4'>
                    <Newsletter/>
                 </div>
 </div>
 <div className='w-full flex gap-3 flex-col justify-center items-center'>
                   <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
-                <div className='p-[10px]  flex flex-wrap items-center  w-[80%] bg-[#0F172A] rounded-[14px] overflow-hidden'>
+                <div className='p-[10px]  flex flex-wrap items-center  w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] overflow-hidden'>
                     {blog[0]?.tag.split(",").map((e)=>{
                       return (
                         <span className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>

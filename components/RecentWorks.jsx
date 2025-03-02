@@ -19,10 +19,10 @@ function RecentWorks() {
     const secondPara="I can hand-code your PSD, Sketch, or Figma file into a responsive email. Whether you need a standalone email, a template, or a dynamic modular system, it will look the best it can in all 80 major email clients with my fully tested code.".split(" ")
     const thirdPara="Email coding is a fast-paced world that frequently changes without warning, so your code might work one day and not the next. I stay up to date with all the goings-on in the email-verse, so my code is always current.".split(" ")
     return <div className='container breaker relative flex gap-4 py-10'>
-      <div className=' flex items-center justify-center breaker-child bg-black  py-3'>
+      <div className=' flex items-center justify-center breaker-child py-3'>
         <Image src={"https://emailsyall.com/wp-content/uploads/2020/09/npr_examples.png"} width={400} height={400}/>
       </div>
-      <div  className='breaker-child bg-black h-full   py-3'>
+      <div  className='breaker-child  h-full   py-3'>
         <h1 ref={textRef} className='py-4 text-[16px] text-customColor dm-mono-regular flex flex-wrap'  >
       {firstPara.map((word,i)=>{
         var start= i/firstPara.length;

@@ -138,7 +138,7 @@ async function submit(formData){
             </div>
         </div>
       </div>
-      <form action={submit} style={{margin:"auto",marginTop:"2.5rem"}} className=' form-control bg-slate-900 p-4 justify-center rounded-lg max-w-screen-sm md:w-[90%]'>
+      <form action={submit} style={{margin:"auto",marginTop:"2.5rem"}} className=' form-control bg-[#262626] p-4 justify-center rounded-lg max-w-screen-sm md:w-[90%]'>
         <input className='input my-4 dm-mono-regular text-[#000000]' type='email' placeholder='your email' name='email' required/>
         <input className='input my-4 dm-mono-regular text-[#000000]' type='name' placeholder="what's your name" name='name'/>
 

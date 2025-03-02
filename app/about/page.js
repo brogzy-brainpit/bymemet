@@ -35,7 +35,7 @@ openGraph: {
 };
 function AboutPage() {
   return (
-    <div className='hero-sectio bg-black' style={{padding:"100px 0px"}}>
+    <div className='hero-sectio ' style={{padding:"100px 0px"}}>
       
       <div className='container'>
      <PageHeader page={"About"} title01={"About memet"} title02={"who i am?"}/>

@@ -95,26 +95,12 @@ let blogs = [];
 
         <BlogLists blogs={blogs}/>
 
-        <div className={`sticky top-[60px] min-h-screen h-fit overflow-hidden border rounded-lg shadow-md lg:col-span-2`}>
+        <div className={`bg-[#0F172A] sticky top-[60px] min-h-screen h-fit overflow-hidden border rounded-lg shadow-md lg:col-span-2`}>
             <div  className='h-full w-full flex  flex-col'>
-
-            <div className='flex gap-3 flex-col w-[100%] justify-center items-center'>
-                  <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
-                <div className='p-[10px]  flex flex-wrap items-center  w-[95%] bg-[#0F172A] rounded-[14px] overflow-hidden'>
-                    {tags.map((e,index)=>{
-                      return (
-                        <span key={index} className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
-                         #{e}
-                        </span>
-                      )
-                    })}
-                </div>
-</div>
-
-
+{/* lets talk */}
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
                   <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
-                <div className='flex flex-col gap-5 items-center w-[95%] bg-[#0F172A] rounded-[14px] p-4'>
+                <div className='flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)]  rounded-[14px] p-4'>
                    <p className='dm-mono-regular'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
                    <div className='flex gap-4'>
                     <Link target='blank' href={"https://x.com/bok_cheza"}>
@@ -137,9 +123,23 @@ let blogs = [];
                    </div>
                 </div>
 </div>
+{/* newsletter */}
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
-                <div className='flex flex-col gap-5 items-center w-[95%] bg-[#0F172A] rounded-[14px] p-4'>
+                <div className='flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] p-4'>
                    <Newsletter/>
+                </div>
+</div>
+{/* tags */}
+<div className='flex gap-3 flex-col w-[100%] justify-center items-center'>
+                  <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
+                <div className='p-[10px]  flex flex-wrap items-center  w-[95%] bg-[rgba(0,0,0,0.22)] rounded-[14px] overflow-hidden'>
+                    {tags.map((e,index)=>{
+                      return (
+                        <span key={index} className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
+                         #{e}
+                        </span>
+                      )
+                    })}
                 </div>
 </div>
             </div>

@@ -76,7 +76,7 @@ const Word=({word,progress,range})=>{
   }
 const Service=()=>{
     return <div className='h-[330vh] relative'>
-        <div className=' bg-black h-[100vh] sticky top-[15%] border-t py-3 border-stone-500'>
+        <div className='noise h-[100vh] sticky top-[15%] border-t py-3 border-stone-500'>
         <div className='flex items-center md:justify-between justify-start pb-[30px] gap-4'>
     <h1 className='md:text-[40px] text-[30px] font-custom capitalize '>01</h1>
     <h1 className='md:text-[40px] text-[30px]  font-custom= capitalize font-custom dm-mono-regula'>email design</h1>
@@ -104,7 +104,7 @@ const Service=()=>{
 </div>
 
 </div>
-<div className=' bg-black h-[100vh] sticky top-[27%] border-t py-3 border-stone-500'>
+<div className=' noise h-[100vh] sticky top-[27%] border-t py-3 border-stone-500'>
             <div className='flex items-center md:justify-between justify-start pb-[30px] gap-4'>
     <h1 className='md:text-[40px] text-[30px] font-custom capitalize '>02</h1>
     <h1 className='md:text-[40px] text-[30px]  font-custom capitalize'>Email Development</h1>
@@ -140,7 +140,7 @@ const Service=()=>{
 </div>
 
 </div>
-<div className=' bg-black h-[100vh] sticky top-[38%] border-t py-3 border-stone-500'>
+<div className=' noise h-[100vh] sticky top-[38%] border-t py-3 border-stone-500'>
             <div className='flex items-center md:justify-between justify-start pb-[30px] gap-4'>
     <h1 className='md:text-[40px] text-[30px] font-custom capitalize '>03</h1>
     <h1 className='md:text-[40px] text-[30px]  font-custom uppercase'>Automation Setup</h1>

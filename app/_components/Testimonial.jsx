@@ -1,18 +1,11 @@
 "use client"
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { reviews } from "@/info";
 import { Star } from "@mui/icons-material";
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-// import { article } from '../info';
-// import { Avatar } from '@material-ui/core';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -38,6 +31,7 @@ export default function TestimonialsCarousel() {
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
+        interval={5000}
         enableMouseEvents
       >
            {reviews.map((e,index)=>{
