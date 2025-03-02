@@ -1,13 +1,23 @@
 "use client"
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-// import Star from "@mui/icons-material/Star";
 import { reviews } from "@/info";
 import { Star } from "@mui/icons-material";
-// import FormatQuoteOutlined from "@mui/icons-material/FormatQuote";
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+// import { article } from '../info';
+// import { Avatar } from '@material-ui/core';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
 export default function TestimonialsCarousel() {
+    const theme = useTheme();
     const settings = {
         dots: true,
         infinite: true,
@@ -17,9 +27,19 @@ export default function TestimonialsCarousel() {
         autoplay: true,
         autoplaySpeed: 3000,
     };
+    const [activeStep, setActiveStep] = React.useState(0);
+    const handleStepChange = (step) => {
+        setActiveStep(step);
+      };
+    // npm i @mui/material@5.15.17
 
     return (
-        <Slider {...settings}>
+        <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
            {reviews.map((e,index)=>{
             return  <div key={index} className="bg-[transparent]">
             <div  className="flex p-4">
@@ -59,6 +79,6 @@ export default function TestimonialsCarousel() {
            })}
            
             
-        </Slider>
+        </AutoPlaySwipeableViews>
     );
 }

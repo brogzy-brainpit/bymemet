@@ -55,6 +55,7 @@ function BlogContent({body,img,createdAt}) {
 	<a class="entry-author-image" href="https://mailbakery.com/blog/author/iveta/">
 		<img alt="blogs published by memet" src={img} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src={img} decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>	</a>
 	<span class="entry-date dm-mono-regular text-[13px]">{moment().from(createdAt,true)} ago</span>
+  
 </div>
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
         code: Code,
@@ -66,6 +67,7 @@ function BlogContent({body,img,createdAt}) {
           if (node && !node?.properties.className) {
             return children;
           }
+         
           return <p style={{color:'pink'}}>{children}</p>;
         },
       }} allowElement={false}>
