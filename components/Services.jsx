@@ -143,7 +143,7 @@ const Service=()=>{
 <div className=' noise h-[100vh] sticky top-[38%] border-t py-3 border-stone-500'>
             <div className='flex items-center md:justify-between justify-start pb-[30px] gap-4'>
     <h1 className='md:text-[40px] text-[30px] font-custom capitalize '>03</h1>
-    <h1 className='md:text-[40px] text-[30px]  font-custom uppercase'>Automation Setup</h1>
+    <h1 className='md:text-[40px] text-[30px]  font-custom capitalize'>Automation Setup</h1>
     <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
    </div>
         <div className='flex grid-cols-12 gap-x-4 md:grid'>
