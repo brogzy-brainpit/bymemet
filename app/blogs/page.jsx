@@ -94,7 +94,6 @@ let blogs = [];
 
         <div className={`bg-[#0F172A] sticky top-[60px] min-h-screen h-fit overflow-hidden border rounded-lg shadow-md lg:col-span-2`}>
             <div  className='h-full w-full flex  flex-col'>
-lets talk
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
                   <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
                 <div className='flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)]  rounded-[14px] p-4'>

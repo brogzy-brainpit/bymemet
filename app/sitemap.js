@@ -35,7 +35,7 @@ export default  async function sitemap() {
     },{
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
       lastModified: new Date(),
-      changeFrequency:"yearly",
+      changeFrequency:"monthly",
       priority:"0.5",
 
     },
@@ -62,4 +62,4 @@ export default  async function sitemap() {
 
 // Revalidation period of 2 days (48 hours)
 // export const revalidate = 60 * 60 * 24;   // Revalidate the page every 24 hours
-export const revalidate = 60 * 60 * 6; // Revalidate the page every 6 hours (21600 seconds)
+export const revalidate = 60 * 60 * 4; // Revalidate the page every 6 hours (21600 seconds)

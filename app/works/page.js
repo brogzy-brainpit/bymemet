@@ -8,7 +8,13 @@ import PageHeader from '../_components/PageHeader';
 async function getPublished() {
     const id = "66b6151748ee1c92617b2712";
     try {
-      const res = await axios.get(`/blogs/${id}/get/templates`);
+      const res = await axios.get(`/blogs/${id}/get/templates`, {
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      });
     //   /:id/blogs/get/templates
       const allBlogs = res?.data;
     //   console.log("Inside getPublished - Blogs:", allBlogs?.user?.templates); // Debugging
@@ -43,7 +49,7 @@ async function getPublished() {
   
     try {
       templates = await getPublished(); // Properly await the templates from the server-side
-      console.log(templates)
+      // console.log(templates)
     } catch (err) {
       return ;
     }
