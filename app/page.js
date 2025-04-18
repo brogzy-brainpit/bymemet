@@ -20,6 +20,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import ReviewShow from '@/app/_components/Reviews';
 import Compatibility from "./_components/Compatibility";
+import LandingTrusted from "@/components/LandingTrusted";
 
 export default function Home() {
   const [isLoading,setIsLoading]=useState(true)
@@ -36,12 +37,23 @@ export default function Home() {
   },[])
   return (
    <div className="relativ">
-    {/* <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
     {isLoading &&< Preloader/>}
-    </AnimatePresence> */}
+    </AnimatePresence>
     <SmoothScroll>
    {/* <Landing/> */}
    <Landing3 inView={inView}/>
+   <LandingTrusted text companies={[
+  {img:"https://emailsyall.com/wp-content/uploads/2023/09/home_chef_ey.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2023/09/cameo_ey.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2023/09/fundrise_ey.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2023/09/mosaic_ey.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2021/12/ey_girl_scouts.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2020/09/npr_logo.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2023/09/south_dakota_ey.png"},
+  {img:"https://emailsyall.com/wp-content/uploads/2021/12/ey_discovery.png"},
+  
+]}/>
     <SlidingImages/>
    <Services/>
    <Projects/>

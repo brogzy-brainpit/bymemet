@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-  "node": "22.x"
-}, "scripts": {
+    "node": "22.x"
+  },
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,6 +16,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.2",
     "@mui/material": "^6.4.6",
+    "@react-email/components": "^0.0.6",
     "aos": "^2.3.4",
     "axios": "^1.7.9",
     "framer-motion": "^11.11.9",
@@ -27,6 +29,8 @@
     "nodemailer": "^6.10.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^1.9.4",
+    "react-fast-marquee": "^1.6.5",
     "react-markdown": "^9.0.3",
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0",

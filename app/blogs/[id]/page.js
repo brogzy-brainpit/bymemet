@@ -53,7 +53,7 @@ async function getallBlogs(category) {
       return e.category == category
     }) || []; // Return blogs or an empty array
   } catch (err) {
-    console.error("Error fetching blogs:", err.message);
+    // console.error("Error fetching blogs:", err.message);
     throw new Error("Failed to fetch blogs!!!");
   }
 }
@@ -68,7 +68,7 @@ async function getPublished(params) {
       const allBlogs = res;
       return allBlogs?.user?.blogs || []; // Return blogs or an empty array
     } catch (err) {
-      console.error("Error fetching blogs:", err.message);
+      // console.error("Error fetching blogs:", err.message);
       throw new Error("Failed to fetch blogs!!!");
     }
   }

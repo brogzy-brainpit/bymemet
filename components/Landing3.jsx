@@ -85,7 +85,7 @@ function Landing3({inView}) {
     const transX4= useTransform(scrollYProgress,[0,1],[0,-300])
     const slideUp={
       initial:{y:"100%",scale:0},
-  enter:{y:"0%",scale:1,transition:{delay:0.8,duration:0.5}},
+  enter:{y:"0%",scale:1,transition:{delay:0.2,duration:0.4}},
   exit:{y:"100%",scale:0}}
 
 //   const slideUp={

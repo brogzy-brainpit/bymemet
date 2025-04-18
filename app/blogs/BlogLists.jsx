@@ -85,6 +85,7 @@ function BlogLists({blogs}) {
      </NoMagnet>
 
 </div>     
+ 
 {allBlogs.length>0?allBlogs?.map((blog,index)=>{
     return (
       <Link href={`/blogs/${blog?.slug}`}>

@@ -43,8 +43,6 @@ function Compatibility() {
                   <img key={index} src={e.img} alt='compatible-ESP-image' className="w-[80px]"/>
                 )
             })}
-
-        
         </div>
   )
 }

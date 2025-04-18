@@ -20,7 +20,7 @@ const nextConfig = {
             },
             {protocol:"https",
                 port:"",
-                hostname:"res.cloudinary.com",
+                hostname:"res. cloudinary.com",
                 pathname:"/brainpit/image/upload/**",
             },
         ]
