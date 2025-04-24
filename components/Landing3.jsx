@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Rounded from "../common/RoundedButton";
 import {
-   free,ele
+   free,ele,memet
   
 } from '../data'
 import {motion, useScroll, useTransform,useInView} from 'framer-motion'
@@ -115,7 +115,7 @@ function Landing3({inView}) {
     <path fill="#ffffff" style={{transform: "translateY(0%)", transformOrigin: "1262.2px 46.6134px",}}  d="M1262.2 93.2268C1252.69 93.2268 1244.39 91.3497 1237.3 87.5956C1230.29 83.8415 1224.87 78.4607 1221.03 71.453C1217.27 64.4454 1215.4 56.1863 1215.4 46.676C1215.4 37.1656 1217.27 28.9066 1221.03 21.8989C1224.87 14.8913 1230.29 9.51038 1237.3 5.75629C1244.39 1.91876 1252.69 0 1262.2 0C1271.71 0 1279.97 1.87705 1286.98 5.63114C1294.07 9.38524 1299.49 14.8078 1303.24 21.8989C1307.08 28.9066 1309 37.1656 1309 46.676C1309 56.1863 1307.08 64.4454 1303.24 71.453C1299.49 78.4607 1294.07 83.8415 1286.98 87.5956C1279.97 91.3497 1271.71 93.2268 1262.2 93.2268ZM1262.2 84.5924C1269.71 84.5924 1276.17 83.0907 1281.6 80.0874C1287.1 77.0007 1291.27 72.621 1294.11 66.9481C1297.03 61.1918 1298.49 54.4344 1298.49 46.676C1298.49 38.9175 1297.03 32.2018 1294.11 26.529C1291.27 20.7727 1287.1 16.3512 1281.6 13.2645C1276.17 10.1778 1269.71 8.63443 1262.2 8.63443C1254.77 8.63443 1248.31 10.1778 1242.8 13.2645C1237.38 16.3512 1233.21 20.7727 1230.29 26.529C1227.37 32.2018 1225.91 38.9175 1225.91 46.676C1225.91 54.4344 1227.37 61.1918 1230.29 66.9481C1233.21 72.621 1237.38 77.0007 1242.8 80.0874C1248.31 83.0907 1254.77 84.5924 1262.2 84.5924ZM1263.07 74.7066C1257.57 74.7066 1252.77 73.5386 1248.68 71.2027C1244.6 68.7834 1241.47 65.4882 1239.3 61.3169C1237.13 57.0623 1236.05 52.182 1236.05 46.676C1236.05 41.2534 1237.09 36.4148 1239.17 32.1601C1241.26 27.822 1244.26 24.4851 1248.18 22.1492C1252.1 19.7299 1256.73 18.5202 1262.07 18.5202C1267 18.5202 1271.25 19.4379 1274.84 21.2732C1278.51 23.1086 1281.34 25.6113 1283.35 28.7814C1285.43 31.9516 1286.68 35.5388 1287.1 39.5432H1273.09C1272.75 36.957 1271.79 34.7046 1270.21 32.7858C1268.62 30.867 1266.04 29.9077 1262.45 29.9077C1259.7 29.9077 1257.4 30.575 1255.57 31.9098C1253.81 33.2446 1252.52 35.2051 1251.69 37.7913C1250.85 40.294 1250.44 43.2556 1250.44 46.676C1250.44 51.8483 1251.4 55.9361 1253.31 58.9394C1255.23 61.8592 1258.28 63.3191 1262.45 63.3191C1266.04 63.3191 1268.62 62.4015 1270.21 60.5661C1271.79 58.6474 1272.75 56.3115 1273.09 53.5585H1287.1C1286.85 57.5628 1285.77 61.1918 1283.85 64.4454C1281.93 67.6155 1279.18 70.1182 1275.59 71.9536C1272.08 73.7889 1267.91 74.7066 1263.07 74.7066Z" transform-origin="1262.2000122070312px 46.613399505615234px"></path>
 </svg>
   
-</span>
+</span> 
  
 </h1> */}
   <div className='absolut py-3'>
@@ -149,10 +149,13 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
     
      <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit">
          {/* <button class="button-49 dm-mono-regular my-[20px]" role="button">my works</button> */}
-         <div class="my-[20px]">
+         <div class="my-[20px] flex gap-[20px]">
 
-        <Rounded>
-              <Link href="/works" className='dm-mono-regular '>My work</Link>
+         <Rounded>
+              <Link href="/works" target='blank' className='dm-mono-regular '>My work</Link>
+            </Rounded>
+            <Rounded secondary={true} backgroundColor='#0096a5'>
+              <Link href="/works" className='dm-mono-regular '>designs only</Link>
             </Rounded>
          </div>
     </motion.div>
@@ -160,8 +163,9 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
   <div className='relative w-full breaker-child flex justify-center '>
      {/* <Magnetic className="flex justify-center">
      </Magnetic> */}
-    <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"   className='w-[60%] flex justify-center overflow-hidden rounded-[20px]'>
-      <Image alt='memet oumar aka bokchexa' src={ele} className='object-cover' />
+    <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"   className='w-[80%] h-[auto] flex justify-center overflow-hidden rounded-[16px]'>
+      {/* <Image alt='memet oumar aka bokchexa' src={ele} className='object-cover' /> */}
+      <Image alt='memet oumar aka bokchexa' src={memet} className='object-cover' />
     </motion.div>
   </div>
   <div className=' bg-slate-80 w-full breaker-child flex items-end'>

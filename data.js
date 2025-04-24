@@ -7,6 +7,7 @@ import floating6 from './public/images/floating_6.jpg';
 import floating7 from './public/images/floating_7.jpg';
 import floating8 from './public/images/floating_8.jpg';
 import ele from './public/images/ele.jpg';
+import memet from './public/images/memeteditted.png';
 import free from './public/images/free.jpg';
 
 
@@ -21,4 +22,5 @@ export {
     floating8,
     free,
     ele,
+    memet
 }

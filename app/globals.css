@@ -86,10 +86,16 @@ body {
 } */
 @font-face {
   font-family: 'ConthraxBold';
-  src:url('https://brogzy-brainpit.github.io/fonts/Bolmond/Bolmand-Regular.woff')  format('woff');
+  src:url('./fonts/Hatton.woff')  format('woff');
   font-weight: normal;
   font-style: normal;
 }
+/* @font-face {
+  font-family: 'ConthraxBold';
+  src:url('https://brogzy-brainpit.github.io/fonts/Bolmond/Bolmand-Regular.woff')  format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
 @font-face {
   font-family: 'BriceBold';
   src: url('./fonts/Fontspring-DEMO-brice-boldexpanded.otf') format('opentype');
