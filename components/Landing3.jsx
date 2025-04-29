@@ -121,11 +121,11 @@ function Landing3({inView}) {
   <div className='absolut py-3'>
         <div ref={slider} className='relative whitespace-nowrap overflow-hidden'>
         <p ref={firstText} text={"emails by memet"}
-className={`pr-[5px] md:pr-[50px] relative text-par  inline-flex overflow-hidden  text-[97px] md:text-[105px]  leading-[1] text-customColor font-custom `}  >Email developer <span className='dm-mono-regular'>-</span></p>
+className={`pr-[5px] md:pr-[50px] relative text-par  inline-flex overflow-hidden  text-[97px] md:text-[130px]  leading-[1] text-customColor font-custom `}  >Email developer <span className='text-custom'>-</span></p>
  
 
  <p ref={secondText} text={"emails by memet"}   
-className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow-hidden  text-[97px] md:text-[105px]  leading-[1] text-customColor font-custom `}  >Email developer <span className='dm-mono-regular'>-</span></p>
+className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow-hidden  text-[97px] md:text-[130px]  leading-[1] text-customColor font-custom `}  >Email developer <span className='text-custom'>-</span></p>
  
 
 
@@ -152,10 +152,10 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
          <div class="my-[20px] flex gap-[20px]">
 
          <Rounded>
-              <Link href="/works" target='blank' className='dm-mono-regular '>My work</Link>
+              <Link href="/works" className='dm-mono-regular '>My work</Link>
             </Rounded>
             <Rounded secondary={true} backgroundColor='#0096a5'>
-              <Link href="/works" className='dm-mono-regular '>designs only</Link>
+              <Link target='blank' href="https://www.figma.com/design/KCs3m76HBZKEPwk0CMAfYq/designs-by-Memet?node-id=0-1&t=0ciGeZJIRFvBLT7z-1" className='dm-mono-regular '>designs only</Link>
             </Rounded>
          </div>
     </motion.div>
@@ -170,14 +170,14 @@ className={`pr-[5px] md:pr-[50px]  absolute top-0 text-par  inline-flex overflow
   </div>
   <div className=' bg-slate-80 w-full breaker-child flex items-end'>
     <div>
-<SlideUpSolo  slideUp={slideUp} inView={inView}  y='-10%'   className={`relativ capitalize  inline-flex overflow-hidden  text-[18px] md:text-[18px]  leading-[1] text-customColor dm-mono-regular`} text={"available for freelance work"} fontSize={96} />
+<SlideUpSolo  slideUp={slideUp} inView={inView}  y='-10%'   className={`relativ capitalize  inline-flex overflow-hidden  text-[18px] md:text-[18px]  leading-[1] text-customColor dm-mono-regula font-custom`} text={"available for freelance work"} fontSize={96} />
 
 {/* <p className='block font-normal capitalize'>
   available for freelance work
 </p> */}
   <h1 className='font-bold uppercase leading-[1] py-3'>
 
-<SlideUpSolo  slideUp={slideUp} inView={inView}  y='0%' delay={0.05}  className={`relativ text-par  inline-flex overflow-hidden  text-[16px] md:text-[3vw]  leading-[1] text-customColor ${new Date().getDate()=="4"?"dm-mono-regular":new Date().getDate()=="14"?"dm-mono-regular":new Date().getDate()=="24"?"dm-mono-regular":"font-custom"}`} text={`${new Date().getDate()} ${Month} ‘ ${new Date().getFullYear()}`} fontSize={96} />
+<SlideUpSolo  slideUp={slideUp} inView={inView}  y='0%' delay={0.05}  className={`relativ text-par  inline-flex overflow-hidden  text-[16px] md:text-[3vw]  leading-[1] text-customColor ${new Date().getDate()=="4"?"font-custom":new Date().getDate()=="14"?"font-custom":new Date().getDate()=="24"?"font-custom":"font-custom"}`} text={`${new Date().getDate()} ${Month} ‘ ${new Date().getFullYear()}`} fontSize={96} />
 
   {/* <SlideUpText  once={true}  className='text-[10vw] font-bold uppercase leading-[1]'/> */}
   <span>

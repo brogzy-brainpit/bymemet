@@ -16,7 +16,7 @@ import TestimonialsCarousel from './Testimonial'
 function ReviewShow({flexDirection,text,paragraph}){
   return   <div className='container breaker py-16 bg-[transparent]'>
   <div className='breaker-child rounded-lg mb-3 '>
-  <h1 className=' dm-mono-regular t-large t-bold capitalize mb-2'>
+  <h1 className='font-custom t-large capitalize mb-2'>
          don't take my words for it
          </h1>
   <TestimonialsCarousel/>

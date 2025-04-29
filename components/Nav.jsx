@@ -38,21 +38,21 @@ function Nav() {
         </Link>
        <span style={{opacity:0.37}} className=' flex justify-end  h-full dm-mono-regular md:pl-[35px] pl-[0px]'>
         
-        <SlideUpText text={"(email designer & developer)"}  y='0%'  className={`relativ text-par  inline-flex overflow-hidden  text-[16px] md:text-[16px]  leading-[1] text-customColor `}  fontSize={96} clamp={false}/>
+        <SlideUpText text={"(email designer & developer)"}  y='0%'  className={`inline-flex overflow-hidden  text-[16px] md:text-[16px]  leading-[1] font-customColo font-custom `}  fontSize={96} clamp={false}/>
        </span>
      </div>
      <div className=' gap-8 hidden md:flex'>
              <Link href={'/works'}>
-            <p className='dm-mono-regular'>Works</p>
+            <p className='dm-mono-regula font-custom'>Works</p>
              </Link>
               <Link href={'/about'}>
-            <p className='dm-mono-regular'>About</p>
+            <p className='dm-mono-regula font-custom'>About</p>
               </Link>
                <Link href={'/blogs'}>
-            <p className='dm-mono-regular'>Blogs</p>
+            <p className='dm-mono-regula  font-custom'>Blogs</p>
                </Link>
                 <Link href={'/contact'}>
-            <p className='dm-mono-regular'>Contact</p>
+            <p className='dm-mono-regula font-custom'>Contact</p>
                 </Link>
         </div>
         <div className=' gap-8 inline-block md:hidden'>
@@ -119,22 +119,22 @@ x
 <div className='pt-[20px] flex justify-center items-center flex-col  h-full'>
   <Magnetic>
     <Link href={'/works'}>
-   <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}}  className='dm-mono-regular text-heading2 font-bold uppercase heading-hover'>works</motion.h1> 
+   <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}}  className='dm-mono-regula font-custom text-heading2 font-bold uppercase heading-hover'>works</motion.h1> 
     </Link>
   </Magnetic>
   <Magnetic>
   <Link href={"/about"}>
-   <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' dm-mono-regular text-heading2 font-bold uppercase heading-hover'>About</motion.h1> 
+   <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' font-custom text-heading2 font-bold uppercase heading-hover'>About</motion.h1> 
   </Link>
   </Magnetic>
   <Magnetic>
     <Link href={"/blogs"}>
-   <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' dm-mono-regular text-heading2 font-bold uppercase heading-hover'>Blogs</motion.h1> 
+   <motion.h1  variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className=' font-custom text-heading2 font-bold uppercase heading-hover'>Blogs</motion.h1> 
     </Link>
   </Magnetic>
   <Magnetic>
   <Link href={"/contact"}>
-   <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className='dm-mono-regular text-heading2 font-bold uppercase heading-hover'>contact</motion.h1> 
+   <motion.h1 variants={textAnim} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" onClick={(e)=>{setBurgerMenu(false)}} className='font-custom text-heading2 font-bold uppercase heading-hover'>contact</motion.h1> 
   </Link>
   </Magnetic>
 

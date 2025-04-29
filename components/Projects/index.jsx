@@ -83,9 +83,9 @@ export default function index() {
   }
 
   return (
-  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}}  className={`${styles.projects} container`}>
-    <div className={styles.body}>
-    <h1 className='text-heading2 font-custom flex justify-start text-left w-full py-[20px]'>project i worked on </h1>
+  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}}  className={`${styles.projects} container `}>
+    <div className={`${styles.body} mt-[-450px] z-[100]`}>
+    <h1 className='text-heading font-custom flex justify-start text-left w-full py-[20px]'>project i worked on </h1>
     {/* <div className='bg-slate-600'>
     </div> */}
       {

@@ -8,7 +8,7 @@ function Texter() {
 
   return (
     <div className=' container my-[120px] '>
-      <SlideUpText  className={`relativ text-par  inline-flex overflow-hidden  text-[56px] md:text-[96px]  leading-[1] text-customColor font-custom`} text={"10 years bringing your worth it designs to life."} fontSize={96} clamp={false}/>
+      <SlideUpText  className={`inline-flex overflow-hidden  text-[56px] md:text-[96px]  leading-[1] font-custom`} text={"10,000 hours (5 years) bringing your worth it designs to life."} fontSize={96} clamp={false}/>
         {/* <h2 ref={textRef} custom={index} variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"  className='md:text-[96px] text-[10vw] leading-[1] text-customColor font-custom2'>
         10 years bringing your worth it stories to life.
         </h2> */}

@@ -65,8 +65,8 @@ export default function TestimonialsCarousel() {
         <img alt="service reviewers image" src={e.img} height={70} width={60} className="w-12 h-auto mr-5 rounded-full"/>
             </div>
             <div>
-                <h4 className='capitailze t-bold dm-mono-regular'>{e.name}</h4>
-               <p className="dm-mono-regular">{e.title}</p>
+                <h4 className='capitailze font-custom'>{e.name}</h4>
+               <p className="dm-mono-regular text-[10px]">{e.title}</p>
             </div>
         </div>
         </div>

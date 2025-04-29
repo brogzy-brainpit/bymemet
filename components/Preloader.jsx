@@ -58,7 +58,7 @@ function Preloader() {
   return (
     <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-50  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-black'> 
    <div className='h-full w-full relative flex items-center justify-center flex-col'>
-   <motion.p className='text-[6vw] t-bold z-30 dm-mono-regular' variants={textOpacity} animate="enter" initial="initial" exit="exit">
+   <motion.p className='text-[8vw] capitalize  z-30 font-custom' variants={textOpacity} animate="enter" initial="initial" exit="exit">
     {words[index]}
     </motion.p>
 

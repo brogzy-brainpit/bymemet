@@ -65,7 +65,7 @@ async function submit(formData){
       }
      
       // return toast.success("email sent successfully",{style:{fontFamily:"Poppins"}})
-      console.log('Delivered message %s', info);
+      // console.log('Delivered message %s', info);
       sent=true;
   }) 
     
@@ -83,8 +83,8 @@ async function submit(formData){
       <div className='container'>
       <PageHeader page={"Contact"} title01={"Contact me"} title02={"get in touch"}/>
       <div>
-        <p className='py-2 dm-mono-regular' style={{color:"#ffffff",fontSize:"25px",fontWeight:"500"}}>
-          Send me a message</p>
+        <p className='t-large mb-4 capitalize font-custom ' style={{color:"#ffffff"}}>
+          Send me a message💌</p>
         <p className='py-2 dm-mono-regular'>
         Feel free to reach out through contact form or find my contact information 
         below. Your feedback, questions, and suggestions are important to

@@ -13,11 +13,11 @@ function Services() {
       target:textRef2,
       offset:["start end",'start 0.25']
     })
-    const secondPara= "how i can help".split(" ")
-    const secondPara2= "not your regular email developer".split(" ")
+    const secondPara= "How i can Help?".split(" ")
+    const secondPara2= "Not your Regular Email Developer".split(" ")
 
   return (
-<div className=' container flex flex-col gap-[5vh] py-5'>
+<div className=' container flex flex-col gap-[5vh] py-[150px]'>
 {/* <h1 className='py-4 text-[16px] text-customColor dm-mono-regular ' >
 {secondPara.map((word,i)=>{
         var start= i/secondPara.length;
@@ -26,14 +26,14 @@ function Services() {
       })}
 
 </h1> */}
-<h1 ref={textRef2} once={true}  className="text-[40px] font-custom gap-3 flex flex-wrap" gap='10px'>
+<h1 ref={textRef2} once={true}  className=" t-large mb-4 font-custom gap-3 flex flex-wrap" gap='10px'>
 {secondPara2.map((word,i)=>{
     var start= i/secondPara2.length;
     var end= start+ (1/secondPara2.length);
     return <Word key={i} range={[start,end]} word={word} progress={ss}/>
   })}
 </h1>
-<div className='flex grid-cols-12 gap-x-4 md:grid'>
+<div className='flex grid-cols-12 gap-x-4 md:grid pb-10'>
 
 
 <div className='gap-[10px] md:gap-[30px] col-span-8 flex flex-col gap-x-space-xl gap-y-space-2xs sm:flex-row md:col-start-6'>
@@ -42,7 +42,7 @@ function Services() {
     <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[16px] text-customColor dm-mono-regular" text={"Let’s face it, coding emails is time-consuming and hard! It takes a specialized set of skills to do it right, and many marketers cut corners by sending image-only emails. i do it both!!!"}/>
 </div>
 </div>
-<h1 ref={textRef} once={true}  className="text-[40px] font-custom gap-3 flex flex-wrap" gap='10px'>
+<h1 ref={textRef} once={true}  className="t-large mb-4 font-custom gap-3 flex flex-wrap" gap='10px'>
     {secondPara.map((word,i)=>{
         var start= i/secondPara.length;
         var end= start+ (1/secondPara.length);

@@ -5,7 +5,7 @@ import AboutImage from "../../assets/jahid.jpg"
 import PageHeader from '../_components/PageHeader'
 import Link from 'next/link'
 import {
-  free,ele
+  free,ele,memet
  
 } from '../../data'
 import Compatibility from '../_components/Compatibility'
@@ -35,21 +35,23 @@ openGraph: {
 };
 function AboutPage() {
   return (
-    <div className='hero-sectio ' style={{padding:"100px 0px"}}>
+    <div className='hero-sectio container ' style={{padding:"100px 0px"}}>
       
       <div className='container'>
      <PageHeader page={"About"} title01={"About memet"} title02={"who i am?"}/>
       <div className='breaker py-16'>
       <div className='breaker-child' style={{width:"45% !important"}}>
       <div className='w-full p-2.5 flex justify-center'>
-        <Image alt='about-person-image' className='py-2 h-auto rounded-xl'  src={ele} style={{color:"#000F38",fontSize:"25px",fontWeight:"500",width:"100%"}}/>  
+        <Image alt='about-person-image' className='py-2 h-auto rounded-xl'  src={memet} style={{color:"#000F38",fontSize:"25px",fontWeight:"500",width:"100%"}}/>  
         {/* <img src='https://themebing.com/wp/amike/wp-content/uploads/elementor/thumbs/me-01-oiscg5p6xhb0wn2ew54ye53hi21rk30p2dh5pmlw5c.png' /> */}
       </div>
       </div>
       <div className='breaker-child '>
-       
+      <h3 className='t-large mb-4 capitalize font-custom '>
+          how it started💡
+        </h3>
         <p className='py-2 t-medium dm-mono-regular'>
-        Let’s rewind to 2017—a year that changed everything for me. I’m Memet Oumar, the founder, owner, and the one-guy powerhouse behind inboxified and byMemet. Back then, I was a web developer with an appetite for challenges, and when I was asked to code my first email, I dove in headfirst. In the midst of crafting that email, a lightbulb moment hit: coding emails is really just putting together a bunch of boxes. That insight not only led to a triumphant first email but also sparked the emergence of a true email coding enthusiast.
+        Let’s rewind to 2019—a year that changed everything for me. I’m Memet Oumar, the founder, owner, and the one-guy powerhouse behind inboxified and byMemet. Back then, I was a web developer with an appetite for challenges, and when I was asked to code my first email, I dove in headfirst. In the midst of crafting that email, a lightbulb moment hit: coding emails is really just putting together a bunch of boxes. That insight not only led to a triumphant first email but also sparked the emergence of a true email coding enthusiast.
         </p>
         <p className='py-2 t-medium dm-mono-regular'>
 
@@ -87,11 +89,11 @@ Since that memorable day, I’ve made it my mission to push email coding practic
       
       </div>
    
-      <h3 className='t-large t-bold mb-4 capitalize dm-mono-regular'>
+      <h3 className='t-large mb-4 capitalize font-custom '>
           what you can expect?
         </h3>
 <p className='py-2 t-medium dm-mono-regular'>
-Once you contact me, we’ll set up an introductory call or chat to flesh out what kind of project you have. The most common request I get is to take a PSD, AI, or Sketch file and code it into an email that looks great in all clients. If you know the email client makeup of your audience, I can suggest some coding techniques that may enhance your subscriber experience. We then agree on a due date, and I begin coding. When production is complete, I will send you a ZIP file containing the HTML document and optimized images, as well as a link to screenshots of how your email will look in all major email clients.
+Once you contact me, we’ll set up an introductory call or chat to flesh out what kind of project you have. The most common request I get is to take a PSD, figma, or Sketch file and code it into an email that looks great in all clients. If you know the email client makeup of your audience, I can suggest some coding techniques that may enhance your subscriber experience. We then agree on a due date, and I begin coding. When production is complete, I will send you a ZIP file containing the HTML document and optimized images, as well as a link to screenshots of how your email will look in all major email clients.
 </p>
 <p className='py-2 t-medium dm-mono-regular'>
 The process is the same for an email template. If you need a modular system, I will need access to your email service provider platform so that I may set up the modules and create the first couple of emails.
