@@ -50,10 +50,10 @@ function AboutPage() {
       <h3 className='t-large mb-4 capitalize font-custom '>
           how it started💡
         </h3>
-        <p className='py-2 t-medium dm-mono-regular'>
+        <p className='py-2 t-medium font-body'>
         Let’s rewind to 2019—a year that changed everything for me. I’m Memet Oumar, the founder, owner, and the one-guy powerhouse behind inboxified and byMemet. Back then, I was a web developer with an appetite for challenges, and when I was asked to code my first email, I dove in headfirst. In the midst of crafting that email, a lightbulb moment hit: coding emails is really just putting together a bunch of boxes. That insight not only led to a triumphant first email but also sparked the emergence of a true email coding enthusiast.
         </p>
-        <p className='py-2 t-medium dm-mono-regular'>
+        <p className='py-2 t-medium font-body'>
 
 Since that memorable day, I’ve made it my mission to push email coding practices and standards to new heights. I firmly believe that every email user deserves a quality experience—regardless of whether their email client is cutting-edge or a bit old-school. It’s simply not acceptable for anyone to be stuck with a subpar experience because of technical limitations. For me as a developer—and for you as someone who relies on sending these messages—we must collaborate to meet users where they are. If making an email shine in Outlook means writing extra code, then I’m all in. Every email client comes with its own quirks, but it’s my responsibility to navigate those challenges and craft emails that deliver their message in the best possible way. 
 </p>
@@ -92,10 +92,10 @@ Since that memorable day, I’ve made it my mission to push email coding practic
       <h3 className='t-large mb-4 capitalize font-custom '>
           what you can expect?
         </h3>
-<p className='py-2 t-medium dm-mono-regular'>
+<p className='py-2 t-medium font-body'>
 Once you contact me, we’ll set up an introductory call or chat to flesh out what kind of project you have. The most common request I get is to take a PSD, figma, or Sketch file and code it into an email that looks great in all clients. If you know the email client makeup of your audience, I can suggest some coding techniques that may enhance your subscriber experience. We then agree on a due date, and I begin coding. When production is complete, I will send you a ZIP file containing the HTML document and optimized images, as well as a link to screenshots of how your email will look in all major email clients.
 </p>
-<p className='py-2 t-medium dm-mono-regular'>
+<p className='py-2 t-medium font-body'>
 The process is the same for an email template. If you need a modular system, I will need access to your email service provider platform so that I may set up the modules and create the first couple of emails.
 </p>
       

@@ -4,7 +4,7 @@ import React from 'react'
 function PageHeader({title01,title02,page}) {
   return (
     <div className='mt-5 p-2 w-full'>
-    <p className='custom-t-color t-medium uppercase t-align-center dm-mono-regular'>
+    <p className='custom-t-color t-medium uppercase t-align-center font-body'>
        {title01}
       </p>
     <h4 style={{marginTop:"10px"}} className='font-custom  t-large capitalize t-align-center'>

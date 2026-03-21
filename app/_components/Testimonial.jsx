@@ -49,7 +49,7 @@ export default function TestimonialsCarousel() {
         {/* <Image alt="review quote" src={quote} height={30} width={30} style={{width:"40px",height:"40px",marginRight:"30px",borderRadius:"50%"}}/> */}
             </div>
             <div className="hero-desc">
-                <p className='dm-mono-regular capitailze italic mb-3 ' style={{fontWeight:"500"}}>
+                <p className='font-body capitailze italic mb-3 ' style={{fontWeight:"500"}}>
                 {e.para}
                 </p>
                 <div style={{display:"flex"}}>
@@ -66,7 +66,7 @@ export default function TestimonialsCarousel() {
             </div>
             <div>
                 <h4 className='capitailze font-custom'>{e.name}</h4>
-               <p className="dm-mono-regular text-[10px]">{e.title}</p>
+               <p className="font-body text-[10px]">{e.title}</p>
             </div>
         </div>
         </div>

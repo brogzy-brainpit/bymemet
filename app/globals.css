@@ -1,11 +1,72 @@
+
+*{
+  scroll-behavior: smooth;
+}
+:root {
+    --size-unit: 16;
+    --size-container-ideal: 1440;
+    --size-container-min: 992px;
+    --size-container-max: 1920px;
+    --size-container: clamp(var(--size-container-min), 100vw, var(--size-container-max));
+    --size-font: calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));
+
+    /* Optional padding/gap defaults */
+    --section-padding: 8em;
+    --container-padding-l: 4em;
+    --container-padding-m: 2em;
+    --container-padding-s: 1em;
+    --gap: 2em;
+
+    /* Smooth animation curves */
+    --animation-default: 0.8s cubic-bezier(0.625, 0.05, 0, 1);
+    --animation-bounce: 0.8s cubic-bezier(0.35, 1.75, 0.6, 1);
+  }
+
+  /* medium screen up to the large screen point */
+  @media screen and (max-width: 991px) {
+    :root {
+      /* --size-unit: 14; */
+      --size-container-ideal: 834;
+      --size-container-min: 768px;
+      --size-container-max: 991px;
+      --container-padding-l: 3.75em;
+      --container-padding-m: 1.75em;
+    }
+  }
+/* small screen up to the medium screen point*/
+  @media screen and (max-width: 767px) {
+    :root {
+      --size-unit: 12;
+      --size-container-ideal: 390;
+      --size-container-min: 320px;
+      --size-container-max: 479px;
+      --section-padding: 6em;
+      --container-padding-l: 1.25em;
+      --container-padding-m: 1.25em;
+      --container-padding-s: 0.5em;
+      --gap: 1.5em;
+    }
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    font-size: var(--size-font);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+    margin: 0;
+    box-sizing: border-box;
+
+  }
+
 .clip-{
   clip-path: polygon(0 0, 0 100%, 100% 100% , 100% 0);
 }
-.dm-mono-regular {
-  font-family: "DM Mono", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 body {
   /* cursor: wait; */
   color: var(--primary-color);
@@ -84,24 +145,14 @@ body {
   font-weight: normal;
   font-style: normal;
 } */
-@font-face {
-  font-family: 'ConthraxBold';
-  src:url('./fonts/Hatton.woff')  format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 /* @font-face {
   font-family: 'ConthraxBold';
   src:url('https://brogzy-brainpit.github.io/fonts/Bolmond/Bolmand-Regular.woff')  format('woff');
   font-weight: normal;
   font-style: normal;
 } */
-@font-face {
-  font-family: 'BriceBold';
-  src: url('./fonts/Fontspring-DEMO-brice-boldexpanded.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @media (max-width: 1023px) {
   .breaker{
@@ -126,6 +177,71 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* 🌐 Fluid scaling system */
+  :root {
+    --size-unit: 16;
+    --size-container-ideal: 1440;
+    --size-container-min: 992px;
+    --size-container-max: 1920px;
+    --size-container: clamp(var(--size-container-min), 100vw, var(--size-container-max));
+    --size-font: calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));
+
+    /* Optional padding/gap defaults */
+    --section-padding: 8em;
+    --container-padding-l: 4em;
+    --container-padding-m: 2em;
+    --container-padding-s: 1em;
+    --gap: 2em;
+
+    /* Smooth animation curves */
+    --animation-default: 0.8s cubic-bezier(0.625, 0.05, 0, 1);
+    --animation-bounce: 0.8s cubic-bezier(0.35, 1.75, 0.6, 1);
+  }
+
+  /* medium screen up to the large screen point */
+  @media screen and (max-width: 991px) {
+    :root {
+      /* --size-unit: 14; */
+      --size-container-ideal: 834;
+      --size-container-min: 768px;
+      --size-container-max: 991px;
+      --container-padding-l: 3.75em;
+      --container-padding-m: 1.75em;
+    }
+  }
+/* small screen up to the medium screen point*/
+  @media screen and (max-width: 767px) {
+    :root {
+      --size-unit: 12;
+      --size-container-ideal: 390;
+      --size-container-min: 320px;
+      --size-container-max: 479px;
+      --section-padding: 6em;
+      --container-padding-l: 1.25em;
+      --container-padding-m: 1.25em;
+      --container-padding-s: 0.5em;
+      --gap: 1.5em;
+    }
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-size: var(--size-font);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+    margin: 0;
+    box-sizing: border-box;
+
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
 @layer utilities {
   .custom-btn{
     padding: 9px 30px;
@@ -379,17 +495,7 @@ body {
 } */
 /* on a medium screen */
 
-.container{
-  max-width: 1200px;
-  width: 100%;
-  /* background-color: aqua; */
-  --bs-gutter-x: 0.3rem;
-  --bs-gutter-y: 0;
-  padding-left: calc(var(--bs-gutter-x)* .5);
-  padding-right: calc(var(--bs-gutter-x)* .5);
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .flexNone{
   flex: none;
 }
@@ -419,13 +525,7 @@ body {
     line-height: 26px;
   }
 }
-@media (max-width: 1200px) {
-  .container {
-      max-width: 1000px;
-      /* background-color: #171717; */
-  }
 
-}
 /* mobile view start from here down to smallest pixel */
 /* mobile view start from here down to smallest pixel */
 @media (max-width: 992px) {
@@ -456,10 +556,7 @@ body {
   .mobilify-row{
     flex-direction: column ;
   }
-  .container{
-      max-width: 800px;
-      /* background-color: #986767; */
-  }
+  
   .t-large{
     font-size: 42px;
     line-height: 50px;
@@ -493,9 +590,7 @@ body {
     /* display: flex; */
     width: 100% !important;
   }
-  .container{
-      max-width: 720px;
-  }
+ 
   .hide-on-mobile{
     visibility: hidden;
     overflow: hidden;
@@ -516,11 +611,7 @@ body {
     /* display: flex; */
     width: 100% !important;
   }
-  .container{
-      width: 100%;
-      /* padding: 30px !important; */
-      /* background-color: pink; */
-  }
+ 
   .mobile-top-margin{
     margin-top: 10px;
   }
@@ -556,7 +647,21 @@ body {
   font-size: 18px;
 }
 
+@media screen and (max-width: 991px) {
+    .transition-scribble {
+        width: 140%;
+        left: -22%;
+    }
+}
 
+.transition-scribble {
+    width: 120%;
+    height: 120%;
+    display: block;
+    position: absolute;
+    top: -5.5%;
+    left: -12%;
+}
 
 
 

@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { motion} from 'framer-motion'
-import Image from 'next/image';
 import {
     floating1, 
     floating2, 
@@ -12,7 +11,7 @@ import {
     floating7, 
     floating8, 
   
-} from '../data'
+} from '../../data'
 const textOpacity={
     initial:{
        opacity: 0,
@@ -43,7 +42,7 @@ const menuSlide={
 
     },
 }
-function Preloader() {
+function PreloaderIntro() {
     const [index,setIndex]=useState(0)
     const words=['hello','bonjour','مرحبًا','你好','नमस्ते', 'привет', 'welcome']
     // const positions= [{left:"54%",top:"60%"},{left:"60vw",top:"-5vh"}, {left:"4%",top:"5%"},{left:"90%",top:"50%"},{left:"90%",top:"3%"},{left:"40%",top:"80%"},{left:"60%",top:"5vh"},]
@@ -56,9 +55,9 @@ function Preloader() {
         }, index==0?1400:170);
     },[index])
   return (
-    <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-50  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-black'> 
+    <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-preloader  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-transparent'> 
    <div className='h-full w-full relative flex items-center justify-center flex-col'>
-   <motion.p className='text-[8vw] capitalize  z-30 font-custom' variants={textOpacity} animate="enter" initial="initial" exit="exit">
+   <motion.p className='text-heading text-brand-black capitalize font-custom' variants={textOpacity} animate="enter" initial="initial" exit="exit">
     {words[index]}
     </motion.p>
 
@@ -75,4 +74,4 @@ function Preloader() {
   )
 }
 
-export default Preloader
+export default PreloaderIntro

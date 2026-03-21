@@ -99,8 +99,8 @@ async function page({params}) {
     <div className='container relative h-[100v flex-col w-full  font-custom4 flex items-center py-[20vh] '>
     {/* <div className=" container sticky top-0 h-full flex flex-col  justify-center"> */}
     <div className="h-full flex flex-col justify-between items-center ">
-     <h1 className="text-[40px] text-center capitalize font-custo dm-mono-regular gap-3 flex flex-wrap">{blog[0]?.topic}</h1>
-      {/* <p className='dm-mono-regular text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p> */}
+     <h1 className="text-[40px] text-center capitalize font-custo font-body gap-3 flex flex-wrap">{blog[0]?.topic}</h1>
+      {/* <p className='font-body text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p> */}
       </div>
     
       <div className="p-2 w-full">
@@ -113,8 +113,8 @@ async function page({params}) {
             </div>
             {/* lorem20 abeh fgf f wfwfgw hwgfg wfwhfwfgwg wifg wifgiuow */}
          <BlogContent createdAt={blog[0].createdAt} img={blog[0].avatar}  body={blog[0].content}/>
-            <div className=' w-full py-[60px] md:px-[10px] px-[0px] relative dm-mono-regular mt-[-40px] z-[0] rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
-            <p className='dm-mono-regular text-[20px] pb-[30px]'> contents related to {blog[0]?.category}</p>
+            <div className=' w-full py-[60px] md:px-[10px] px-[0px] relative font-body mt-[-40px] z-[0] rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
+            <p className='font-body text-[20px] pb-[30px]'> contents related to {blog[0]?.category}</p>
           <div className='flex flex-wrap gap-2 w-full justify-center'>
           {allblog?.map(({topic,thumbnail,slug},index)=>{
             return (
@@ -135,14 +135,14 @@ async function page({params}) {
             <div  className='h-full w-full flex  flex-col'>
 
 <div className='flex  gap-3 flex-col w-[100%] justify-center items-center my-4'>
-                  <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
+                  <h2 className=' text-center font-body text-[20px]  mb-2'>let's talk</h2>
                 <div className='relative mt-4 flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] p-4 pt-[20px]'>
                      <div class="entry">
                     <a class="entry-author-image">
                       <img alt="blogs published by memet" src={blog[0]?.avatar} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src="https://mailbakery.s3.amazonaws.com/wp-content/uploads/2017/04/27071827/Iveta.jpg" decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>
                       	</a>
                   </div>
-                   <p className='dm-mono-regular'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
+                   <p className='font-body'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
                    <div className='flex gap-4'>
                     <Link target='blank' href={"https://x.com/bok_cheza"}>
                    <div className='p-3 rounded-full flex justify-center items-center h-[50px] w-[50px] bg-stone-900 '>
@@ -170,11 +170,11 @@ async function page({params}) {
                 </div>
 </div>
 <div className='w-full flex gap-3 flex-col justify-center items-center'>
-                  <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
+                  <h2 className=' text-center font-body text-[20px] px-4 mb-4'>tags</h2>
                 <div className='p-[10px]  flex flex-wrap items-center  w-[80%] bg-[rgba(0,0,0,0.22)] rounded-[14px] overflow-hidden'>
                     {blog[0]?.tag.split(",").map((e)=>{
                       return (
-                        <span className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
+                        <span className='font-body text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
                          #{e.trim()}
                         </span>
                       )
@@ -195,7 +195,7 @@ async function page({params}) {
 
 function Button({text}){
     return (
-        <button className='px-4 py-2 rounded-full border btn dm-mono-regular'>{text}</button>
+        <button className='px-4 py-2 rounded-full border btn font-body'>{text}</button>
     )
 }
 export default page

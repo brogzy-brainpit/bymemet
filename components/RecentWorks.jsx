@@ -23,7 +23,7 @@ function RecentWorks() {
         <Image src={"https://emailsyall.com/wp-content/uploads/2020/09/npr_examples.png"} width={400} height={400}/>
       </div>
       <div  className='breaker-child  h-full   py-3'>
-        <h1 ref={textRef} className='py-4 text-[16px] text-customColor dm-mono-regular flex flex-wrap'  >
+        <h1 ref={textRef} className='py-4 text-[16px] text-customColor font-body flex flex-wrap'  >
       {firstPara.map((word,i)=>{
         var start= i/firstPara.length;
         var end= start+ (1/firstPara.length);
@@ -31,7 +31,7 @@ function RecentWorks() {
       })}
 
         </h1>
-        <h1 ref={textRef2} className='py-4 text-[16px] text-customColor dm-mono-regular flex flex-wrap' >
+        <h1 ref={textRef2} className='py-4 text-[16px] text-customColor font-body flex flex-wrap' >
 {secondPara.map((word,i)=>{
         var start= i/secondPara.length;
         var end= start+ (1/secondPara.length);
@@ -39,7 +39,7 @@ function RecentWorks() {
       })}
 
 </h1>
-<h1 ref={textRef3} className='py-4 text-[16px] text-customColor dm-mono-regular flex flex-wrap' >
+<h1 ref={textRef3} className='py-4 text-[16px] text-customColor font-body flex flex-wrap' >
 {thirdPara.map((word,i)=>{
         var start= i/thirdPara.length;
         var end= start+ (1/thirdPara.length);
@@ -48,7 +48,7 @@ function RecentWorks() {
 
 </h1>
 <Rounded>
-      <Link href="/works" className='dm-mono-regular'>More work</Link>
+      <Link href="/works" className='font-body'>More work</Link>
     </Rounded>
       {/* <button className='btn border p-4 rounded-[30px] capitalize'>my works</button> */}
       </div>

@@ -33,10 +33,10 @@ function Footer() {
       <div className=' px-[2vw] breaker-child'>
     {/* <h2 className='text-[12px] uppercase flex flex-col gap '>
         
-        <span className='capitalize  text-[25px]  dm-mono-regular'>address</span>
-        <span className='capitalize  text-[20px]  dm-mono-regular'>production headquater</span>
-        <span className='capitalize text-[20px]   dm-mono-regular'>n0 16 adam way, rigasa. kaduna</span>
-        <span className='capitalize text-[20px]   dm-mono-regular'>nigeria </span>
+        <span className='capitalize  text-[25px]  font-body'>address</span>
+        <span className='capitalize  text-[20px]  font-body'>production headquater</span>
+        <span className='capitalize text-[20px]   font-body'>n0 16 adam way, rigasa. kaduna</span>
+        <span className='capitalize text-[20px]   font-body'>nigeria </span>
     </h2> */}
 </div>
 </div>
@@ -50,28 +50,28 @@ function Footer() {
         <div className= 'pt-[20px] w-full  flex justify-between md:flex-row flex-col'>
         
             <div>
-              <p className='text-gray-300 capitalize text-[16px] dm-mono-regular'>socials</p>
+              <p className='text-gray-300 capitalize text-[16px] font-body'>socials</p>
               <div className='flex gap-3 w-full '>
                 <Link href={"#"}>
                      {/* <img src={facebook.src} width={20} alt='logo'/> */}
-                     <p className='text-[12px] text-gray-500 cursor-pointer capitalize dm-mono-regular'>facebook</p>
+                     <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>facebook</p>
                 </Link>  
                 <Link target='blank' href={"https://www.instagram.com/bokchexa2020/"}>
-                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize dm-mono-regular'>instagram</p>
+                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>instagram</p>
                 </Link>
                 <Link target='blank' href={"https://x.com/bok_cheza"}>
-                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize dm-mono-regular'>twitter</p>
+                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>twitter</p>
                 </Link>
               </div>
             </div>
             <div className='flex gap-3'>
             <div >
-            <p className='text-gray-300 cursor-pointer capitalize dm-mono-regular'>version</p>
+            <p className='text-gray-300 cursor-pointer capitalize font-body'>version</p>
             <div className='flex gap-4'>
-              <p className='text-[12px] text-gray-500 dm-mono-regular' >
+              <p className='text-[12px] text-gray-500 font-body' >
                 {new Date().getFullYear()} &copy; Edition
               </p>
-              <p className='text-[12px] text-gray-500  dm-mono-regular'>
+              <p className='text-[12px] text-gray-500  font-body'>
               All rights reserved
               </p>
             </div>

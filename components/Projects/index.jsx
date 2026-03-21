@@ -42,7 +42,7 @@ const scaleAnimation = {
     closed: {scale: 0, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
 }
 
-export default function index() {
+export default function index({header}) {
 
   const [modal, setModal] = useState({active: false, index: 0})
   const { active, index } = modal;
@@ -85,7 +85,9 @@ export default function index() {
   return (
   <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}}  className={`${styles.projects} container `}>
     <div className={`${styles.body} mt-[-450px] z-[100]`}>
+      {header?
     <h1 className='text-heading font-custom flex justify-start text-left w-full py-[20px]'>project i worked on </h1>
+     :"" }
     {/* <div className='bg-slate-600'>
     </div> */}
       {
@@ -95,7 +97,7 @@ export default function index() {
       }
     </div>
     <Rounded>
-      <Link href="/works" className='dm-mono-regular'>More work</Link>
+      <Link href="/works" className='font-body'>More work</Link>
     </Rounded>
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>

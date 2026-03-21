@@ -71,8 +71,8 @@ async function getPublished() {
                   {/* <div className='scale-0 overflow-hidden w-full text-[11px] p-[10px] gap-2 absolute top-[0px] flex flex-col bg-[rgba(91,90,90,0.72)] h-full items-center justify-center'> */}
                  {/* <SendEmail newContent={newContent} /> */}
                 {/* <div className='text-[#000000] gap-2 transition-transform duration-800 hover:shadow-md hover:scale-105 w-full h-full absolute top-0 left-0 hover:bg-[rgba(0,0,0,0.73)] flex flex-col justify-center items-center '>
-                    <input className='input dm-mono-regular w-[86%]'/>
-                    <button className='btn dm-mono-regular '>send</button>
+                    <input className='input font-body w-[86%]'/>
+                    <button className='btn font-body '>send</button>
                     </div> */}
                 </div>
         })}

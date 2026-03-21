@@ -85,7 +85,7 @@ async function submit(formData){
       <div>
         <p className='t-large mb-4 capitalize font-custom ' style={{color:"#ffffff"}}>
           Send me a message💌</p>
-        <p className='py-2 dm-mono-regular'>
+        <p className='py-2 font-body'>
         Feel free to reach out through contact form or find my contact information 
         below. Your feedback, questions, and suggestions are important to
          me as i strive to provide exceptional  email development services to your business.
@@ -99,38 +99,38 @@ async function submit(formData){
             </svg>
 
           
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <PhoneAndroid sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
             
             <Link href="tel:+2349063260237">+2349063260237</Link>
             </div>
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <Email sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
             <Link href="mailto:memetoumar@gmail.com">memetoumar@gmail.com</Link>
             </div>
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <WhatsApp sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
             <Link href="https://wa.me/2349063260237" target='_blank'>Chat on WhatsApp</Link>
             </div>
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <Instagram sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
             <Link href="https://www.instagram.com/bokchexa2020/" target='_blank'>Chat on Instagram</Link>
             </div>
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <X sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
             <Link href="https://x.com/bok_cheza" target='_blank'>Chat on <X style={{fontSize:"18px"}}/></Link>
             </div>
-            <div className='py-2 gap-2 flex items-center dm-mono-regular'>
+            <div className='py-2 gap-2 flex items-center font-body'>
             <p  className='rounded-full h-14 w-14 bg-stone-900 flex items-center justify-center mx-1'>
             <LocationOn sx={{color:"#212EA0",fontSize:"30px"}} style={{ fill: "url(#gradient1)"}}/>
             </p>
@@ -139,15 +139,15 @@ async function submit(formData){
         </div>
       </div>
       <form action={submit} style={{margin:"auto",marginTop:"2.5rem"}} className=' form-control bg-[#262626] p-4 justify-center rounded-lg max-w-screen-sm md:w-[90%]'>
-        <input className='input my-4 dm-mono-regular text-[#000000]' type='email' placeholder='your email' name='email' required/>
-        <input className='input my-4 dm-mono-regular text-[#000000]' type='name' placeholder="what's your name" name='name'/>
+        <input className='input my-4 font-body text-[#000000]' type='email' placeholder='your email' name='email' required/>
+        <input className='input my-4 font-body text-[#000000]' type='name' placeholder="what's your name" name='name'/>
 
         {/* <div className='flex gap-1 justify-center items-center'>
         <input className='input m-4' type='name' placeholder="what's your name" name='name'/>
         </div> */}
-        <textarea  className='textarea my-4 dm-mono-regular min-h-[200px] max-h-[400px] text-[#000000]' placeholder='enter your message here' name='message' required/>
+        <textarea  className='textarea my-4 font-body min-h-[200px] max-h-[400px] text-[#000000]' placeholder='enter your message here' name='message' required/>
            {sent &&(
-           <p className='bg-green-500 p-2 dm-mono-regular text-[12px] rounded-md'>email sent successfully</p>
+           <p className='bg-green-500 p-2 font-body text-[12px] rounded-md'>email sent successfully</p>
            )}
            <button type='submit' className='btn custom-btn rounded-full my-2 text-stone-100' style={{width:"auto"}}>submit</button>    
       </form>

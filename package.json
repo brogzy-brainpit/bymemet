@@ -17,6 +17,9 @@
     "@mui/icons-material": "^6.4.2",
     "@mui/material": "^6.4.6",
     "@react-email/components": "^0.0.6",
+    "@react-three/drei": "^9.105.4",
+    "@react-three/fiber": "^8.16.2",
+    "@react-three/postprocessing": "^2.16.2",
     "aos": "^2.3.4",
     "axios": "^1.7.9",
     "framer-motion": "^11.11.9",
@@ -38,7 +41,8 @@
     "react-toastify": "^11.0.3",
     "remark-gfm": "^4.0.0",
     "sass": "^1.63.6",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "smooothy": "^0.0.35"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",

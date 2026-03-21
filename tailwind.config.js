@@ -18,28 +18,36 @@ module.exports = {
         'extra-expanded': '150%',
         'ultra-expanded': '200%',
       },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        customColor:"#FFFFFF"
-        // customColor:"#debc78"
+      zIndex: {
+        'preloader':'999999',
+        'header':'99999',
+
       },
-      fontSize:{
-        'regular': 'clamp(20px, 4vw, 24px)',
-        'heading2': 'clamp(32px, 5vw, 50px)',
-        'heading': 'clamp(40px, 8vw, 130px)',
-        'para': 'clamp(16px, 1vw, 28px)',
+        colors: {
+         'brand-accent':"rgb(116, 97, 195)", //accent for links, hover state 
+        'brand-secondaryx':"#FDEB87", //orange best
+        'brand-secondary':"#FFB347", //blue best  #10B981
+        'brand-white':"#FFFFFF", //blue best  #10B981
+        'brand-black':"#262626", //blue best  #10B981
+        // 'brand-secondary':"#0096A5", //blue best  #10B981
+        
+      },
+       fontSize:{
+          //  'heading': 'clamp(4.2em, 12vw, 9em)',
+           'heading': 'clamp(5.8em, 14vw, 16em)',
+           'heading2': 'clamp(3.8em, 9vw, 9em)',
+           'heading3': 'clamp(1.5em, 2.4vw, 7.5em)',
+           'display': 'clamp(130px, 33vw, 490px)',
+           'para': 'clamp(1em, 1vw, 1.2em)',
+        'button': 'clamp(14px, 3.5vw, 18px)',
       },
       fontFamily:{
         // 'custom':['Arapey','Arial'],
-        'normal':['Poppins'],
-        'custom':['ConthraxBold','Poppins'],
-        'custom2':['BriceBold','Poppins'],
-        'custom3':['Danfo','Poppins'],
-        'custom4':['Antonio', 'sans-serif']
-        // 'custom2':['Amatic','Poppins'],
-        // 'custom3':['Danfo','Arial'],
-        // 'custom4':['Antonio', 'sans-serif']
+        'custom':["var(--font-custom)", "Arial"],
+        'custom2':["var(--font-custom2)", "Arial"],
+        'body':["var(--font-body)", "Arial"],
+        'accent':["var(--font-accent)", "Arial"],
+        // 'custom':['ConthraxBold','Poppins'],
       }
     },
   },

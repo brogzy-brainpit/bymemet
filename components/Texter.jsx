@@ -13,12 +13,12 @@ function Texter() {
         10 years bringing your worth it stories to life.
         </h2> */}
         <div className='flex sm:flex-row flex-col justify-between w-[70%] my-5 capitalize'>
-            <p className='flex-[1] text-[#c8c8c8] p-3 text-[16px] dm-mono-regular'>memet oumar</p>
-            <p className='flex-[1] capitalize text-[#c8c8c8] p-3 text-[16px]  dm-mono-regular'>email developer <br/> (+234)9063260237</p>
+            <p className='flex-[1] text-[#c8c8c8] p-3 text-[16px] font-body'>memet oumar</p>
+            <p className='flex-[1] capitalize text-[#c8c8c8] p-3 text-[16px]  font-body'>email developer <br/> (+234)9063260237</p>
             
             <div className='flex-[2]'>
                <Rounded>
-                          <Link href="/contact"  className='dm-mono-regular'>lets talk!</Link> 
+                          <Link href="/contact"  className='font-body'>lets talk!</Link> 
 
                         </Rounded>
               </div>

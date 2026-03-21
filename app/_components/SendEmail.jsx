@@ -44,8 +44,8 @@ function SendEmail(newContent) {
   return (
     <div className='topper  overflow-hidden w-full text-[11px] p-[10px] gap-2 absolute top-[0px] flex flex-col bg-[rgba(91,90,90,0.72)] h-full items-center justify-center'>
 
-    <input type='email'  className='input max-w-[95%] dm-mono-regular text-stone-950' placeholder='enter email'/>
-    <button onClick={(e)=>{sendTest(newContent)}} className='btn bg-[#1183AE] text-[#ffffff] border-0 hover:bg-[#000]  border-[none] dm-mono-regular'>send test</button>
+    <input type='email'  className='input max-w-[95%] font-body text-stone-950' placeholder='enter email'/>
+    <button onClick={(e)=>{sendTest(newContent)}} className='btn bg-[#1183AE] text-[#ffffff] border-0 hover:bg-[#000]  border-[none] font-body'>send test</button>
     </div>
   )
 }

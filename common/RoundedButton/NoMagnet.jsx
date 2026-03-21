@@ -30,7 +30,7 @@ export default function index({children, backgroundColor="#0096a5", ...attribute
 
   return (
     // <Magnetic>
-      <div  className={` dm-mono-regular ${styles.roundedButton}`} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
+      <div  className={` font-body ${styles.roundedButton}`} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
           {
             children
           }

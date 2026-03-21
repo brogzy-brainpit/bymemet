@@ -31,10 +31,10 @@ function BlogContent({body,img,createdAt}) {
           return (
             <div style={{position:"relative"}}>
               <SyntaxHighlighter style={atomDark} language={match[1]}
-              PreTag={"pre"} {...props} codeTagProps={ {className:"dm-mono-regular text-[11px]",style:{padding:'0',borderRadius:"5px",overflowX:"auto",whiteSpace:"pre-wrap"}}}>
+              PreTag={"pre"} {...props} codeTagProps={ {className:"font-body text-[11px]",style:{padding:'0',borderRadius:"5px",overflowX:"auto",whiteSpace:"pre-wrap"}}}>
                  {String(children).replace(/\n$/,'')}
               </SyntaxHighlighter>
-              <button className='dm-mono-regular text-[13px] p-[10px] rounded-lg hover:bg-[#135d63] ' onClick={handleCopy} style={{position:"absolute",top:"5px",right:"5px",zIndex:"1",background:"#0F172A",boxShadow:"0 4px 6px rgba(0, 0, 0, 0.3);"}}>
+              <button className='font-body text-[13px] p-[10px] rounded-lg hover:bg-[#135d63] ' onClick={handleCopy} style={{position:"absolute",top:"5px",right:"5px",zIndex:"1",background:"#0F172A",boxShadow:"0 4px 6px rgba(0, 0, 0, 0.3);"}}>
                 {copied?'Copied':'Copy Code'}
               </button>
       
@@ -49,12 +49,12 @@ function BlogContent({body,img,createdAt}) {
       }
        
   return (
-    <div className=' py-[60px] md:px-[10px] px-2 relative dm-mono-regular mt-[-40px] blogContent z-1 rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
+    <div className=' py-[60px] md:px-[10px] px-2 relative font-body mt-[-40px] blogContent z-1 rounded-[20px] bg-[#0F172A] border-[2px] border-zinc-500'>
        <div class="entry-meta">
-	<a class="entry-author dm-mono-regular text-[13px]" href="https://mailbakery.com/blog/author/iveta/">memet O.</a>
+	<a class="entry-author font-body text-[13px]" href="https://mailbakery.com/blog/author/iveta/">memet O.</a>
 	<a class="entry-author-image" href="https://mailbakery.com/blog/author/iveta/">
 		<img alt="blogs published by memet" src={img} class="avatar avatar-84 photo lazyloaded" height="84" width="84" data-src={img} decoding="async" data-eio-rwidth="84" data-eio-rheight="84"/>	</a>
-	<span class="entry-date dm-mono-regular text-[13px]">{moment().from(createdAt,true)} ago</span>
+	<span class="entry-date font-body text-[13px]">{moment().from(createdAt,true)} ago</span>
   
 </div>
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={{

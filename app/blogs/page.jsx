@@ -59,7 +59,7 @@ let blogs = [];
     {/* <div className=" container sticky top-0 h-full flex flex-col  justify-center"> */}
     <div className="h-full flex flex-col justify-between items-center ">
      <h1 className="text-[40px] text-center capitalize font-custom gap-3 flex flex-wrap">email design and dev. blogs</h1>
-      <p className='dm-mono-regular text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p>
+      <p className='font-body text-center text-[14px] w-[80%]'>From email design best practices to effective email marketing tips and everything in between.</p>
       </div>
     
       <div className="p-2 w-full">
@@ -67,21 +67,21 @@ let blogs = [];
         {/* buttons */}
 {/* <div className='flex gap-2 items-center justify-center flex-wrap mb-3'>
 <NoMagnet>
-        <p className='dm-mono-regular'>All</p>
+        <p className='font-body'>All</p>
      </NoMagnet><NoMagnet>
-        <p className='dm-mono-regular'>latest</p>
+        <p className='font-body'>latest</p>
      </NoMagnet>
      <NoMagnet>
-        <p className='dm-mono-regular'>design</p>
+        <p className='font-body'>design</p>
      </NoMagnet>
      <NoMagnet>
-        <p className='dm-mono-regular'>development</p>
+        <p className='font-body'>development</p>
      </NoMagnet>
      <NoMagnet>
-        <p className='dm-mono-regular'>marketing</p>
+        <p className='font-body'>marketing</p>
      </NoMagnet>
      <NoMagnet>
-        <p className='dm-mono-regular'>trends</p>
+        <p className='font-body'>trends</p>
      </NoMagnet>
 
 </div> */}
@@ -95,9 +95,9 @@ let blogs = [];
         <div className={`bg-[#0F172A] sticky top-[60px] min-h-screen h-fit overflow-hidden border rounded-lg shadow-md lg:col-span-2`}>
             <div  className='h-full w-full flex  flex-col'>
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center my-4'>
-                  <h2 className=' text-center dm-mono-regular text-[20px]  mb-2'>let's talk</h2>
+                  <h2 className=' text-center font-body text-[20px]  mb-2'>let's talk</h2>
                 <div className='flex flex-col gap-5 items-center w-[80%] bg-[rgba(0,0,0,0.22)]  rounded-[14px] p-4'>
-                   <p className='dm-mono-regular'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
+                   <p className='font-body'>Want to find out how I can solve problems specific to your business? Let's talk.</p>
                    <div className='flex gap-4'>
                     <Link target='blank' href={"https://x.com/bok_cheza"}>
                    <div className='p-3 rounded-full flex justify-center items-center h-[50px] w-[50px] bg-stone-900 '>
@@ -127,11 +127,11 @@ let blogs = [];
 </div>
 {/* tags */}
 <div className='flex gap-3 flex-col w-[100%] justify-center items-center'>
-                  <h2 className=' text-center dm-mono-regular text-[20px] px-4 mb-4'>tags</h2>
+                  <h2 className=' text-center font-body text-[20px] px-4 mb-4'>tags</h2>
                 <div className='p-[10px]  flex flex-wrap items-center  w-[95%] bg-[rgba(0,0,0,0.22)] rounded-[14px] overflow-hidden'>
                     {tags.map((e,index)=>{
                       return (
-                        <span key={index} className='dm-mono-regular text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
+                        <span key={index} className='font-body text-[12px] rounded-[4px] p-[2px] m-[4px] bg-slate-500 '>
                          #{e}
                         </span>
                       )
@@ -170,16 +170,16 @@ export default page
 //     </div>
 
 // <div className={`text-center gap-3 flex flex-grow flex-col justify-between`}>
-//     <button className='dm-mono-regular text-[14px] flex justify-center bg-[#0096A5] btn-primary btn rounded-[6px] px-1 w-fit'>
+//     <button className='font-body text-[14px] flex justify-center bg-[#0096A5] btn-primary btn rounded-[6px] px-1 w-fit'>
 //         {blog.category}
 //     </button>
-//   <h3 className="text-[18px]  text-left font-semibold dm-mono-regular">{blog.topic}</h3>
-//   <p className="text-[10px]  text-left font-semibold dm-mono-regular text-[#85878A]">{blog.content}</p>
+//   <h3 className="text-[18px]  text-left font-semibold font-body">{blog.topic}</h3>
+//   <p className="text-[10px]  text-left font-semibold font-body text-[#85878A]">{blog.content}</p>
 // <div className='flex gap-3'>
-//     <img className='w-[50px] h-[50px] rounded-full dm-mono-regular' alt='memet-oumar' src='https://bymemet.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fele.f2c79bdd.jpg&w=750&q=75'/>
-//     <div className='flex flex-col justify-center items-start dm-mono-regular'>
-//         <h1 className='text-[12px] dm-mono-regular font-semibold'>{blog.publisher}</h1>
-//         <h1 className='text-[10px] dm-mono-regular text-[#85878A]'>
+//     <img className='w-[50px] h-[50px] rounded-full font-body' alt='memet-oumar' src='https://bymemet.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fele.f2c79bdd.jpg&w=750&q=75'/>
+//     <div className='flex flex-col justify-center items-start font-body'>
+//         <h1 className='text-[12px] font-body font-semibold'>{blog.publisher}</h1>
+//         <h1 className='text-[10px] font-body text-[#85878A]'>
 //           {moment().from(blog.createdAt,true)} 
 //           ago
 //           </h1>

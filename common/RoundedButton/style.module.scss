@@ -1,15 +1,14 @@
 .roundedButton{
     border-radius: 3em;
-    border: 1px solid rgb(136, 136, 136);
-    border: 1px solid #0096a5;
+    
     cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 20px 15px 20px;
+    padding: 6px 16px 10px 16px;
     width: fit-content;
-    // font-family: dm-mono-regular;
+    // font-family: font-body;
 
     p, a{
         position: relative;
@@ -17,12 +16,7 @@
         transition: color 0.4s linear;
     }
 
-    &:hover{
-        p,a{
-            color: white;
-            z-index: 4;
-        }
-    }
+
 }
 
 .circle{

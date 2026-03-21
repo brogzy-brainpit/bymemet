@@ -18,7 +18,7 @@ function Services() {
 
   return (
 <div className=' container flex flex-col gap-[5vh] py-[150px]'>
-{/* <h1 className='py-4 text-[16px] text-customColor dm-mono-regular ' >
+{/* <h1 className='py-4 text-[16px] text-customColor font-body ' >
 {secondPara.map((word,i)=>{
         var start= i/secondPara.length;
         var end= start+ (1/secondPara.length);
@@ -38,8 +38,8 @@ function Services() {
 
 <div className='gap-[10px] md:gap-[30px] col-span-8 flex flex-col gap-x-space-xl gap-y-space-2xs sm:flex-row md:col-start-6'>
 {/* <div className='flex gap-[30px]'> */}
-    {/* <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[20px] text-stone-500 dm-mono-regular" text={"()"}/> */}
-    <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[16px] text-customColor dm-mono-regular" text={"Let’s face it, coding emails is time-consuming and hard! It takes a specialized set of skills to do it right, and many marketers cut corners by sending image-only emails. i do it both!!!"}/>
+    {/* <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[20px] text-stone-500 font-body" text={"()"}/> */}
+   <SlideUpText duration={0.1} delay={0.1} className="leading-[1 ] inline-flex overflow-hidden text-[16px] text-customColor font-body" text={"Let’s face it, coding emails is time-consuming and hard! It takes a specialized set of skills to do it right, and many marketers cut corners by sending image-only emails. i do it both!!!"}/>
 </div>
 </div>
 <h1 ref={textRef} once={true}  className="t-large mb-4 font-custom gap-3 flex flex-wrap" gap='10px'>
@@ -54,8 +54,8 @@ function Services() {
 
     <div className='gap-[10px] md:gap-[30px] col-span-8 flex flex-col gap-x-space-xl gap-y-space-2xs sm:flex-row md:col-start-6'>
     {/* <div className='flex gap-[30px]'> */}
-        <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[20px] text-stone-500 dm-mono-regular" text={"(Services)"}/>
-        <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[16px] text-customColor dm-mono-regular" text={"frustrated with emails that don't reflect your brand or drive growth? i craft premium email experiences that captivate and help you focus on growing your business."}/>
+        <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[20px] text-stone-500 font-body" text={"(Services)"}/>
+        <SlideUpText duration={0.1} delay={0.1} className="leading-[1] inline-flex overflow-hidden text-[16px] text-customColor font-body" text={"frustrated with emails that don't reflect your brand or drive growth? i craft premium email experiences that captivate and help you focus on growing your business."}/>
     </div>
 </div>
 
@@ -88,16 +88,16 @@ const Service=()=>{
    
       <div>
       <div className='flex gap-6  py-3 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>01</h1>
-            <h1 className='text-[16px] font-custo dm-mono-regular'>Crafting visually appealing and brand-specific email templates.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>01</h1>
+            <h1 className='text-[16px] font-custo font-body'>Crafting visually appealing and brand-specific email templates.</h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>02</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Ensuring designs are optimized for conversions and engagement. </h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>02</h1>
+            <h1 className='text-[16px] font-body'>Ensuring designs are optimized for conversions and engagement. </h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>03</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Email Code Optimization</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>03</h1>
+            <h1 className='text-[16px] font-body'>Email Code Optimization</h1>
         </div>
       </div>
     </div>
@@ -119,20 +119,20 @@ const Service=()=>{
       </p> */}
       <div>
       <div className='flex gap-6  py-3 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>01</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Building mobile-friendly and fully responsive emails.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>01</h1>
+            <h1 className='text-[16px] font-body'>Building mobile-friendly and fully responsive emails.</h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>02</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Ensuring consistent rendering across devices and email clients.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>02</h1>
+            <h1 className='text-[16px] font-body'>Ensuring consistent rendering across devices and email clients.</h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>03</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Writing clean, optimized, and well-documented HTML/CSS for emails.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>03</h1>
+            <h1 className='text-[16px] font-body'>Writing clean, optimized, and well-documented HTML/CSS for emails.</h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>04</h1>
-            <h1 className='text-[16px] dm-mono-regular'> Compatibility testing with major email clients like Gmail, Outlook, Apple Mail, etc.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>04</h1>
+            <h1 className='text-[16px] font-body'> Compatibility testing with major email clients like Gmail, Outlook, Apple Mail, etc.</h1>
         </div>
        
       </div>
@@ -155,12 +155,12 @@ const Service=()=>{
       </p> */}
       <div>
       <div className='flex gap-6  py-3 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>01</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Setting up automated workflows for welcome series, abandoned cart, and post-purchase emails.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>01</h1>
+            <h1 className='text-[16px] font-body'>Setting up automated workflows for welcome series, abandoned cart, and post-purchase emails.</h1>
         </div>
         <div className='flex gap-6 border-t py-3 border-stone-500 items-center '>
-            <h1 className='text-[16px] text-stone-500 dm-mono-regular'>02</h1>
-            <h1 className='text-[16px] dm-mono-regular'>Designing and coding emails for platforms like Mailchimp, Klaviyo, HubSpot, or Salesforce Marketing Cloud.</h1>
+            <h1 className='text-[16px] text-stone-500 font-body'>02</h1>
+            <h1 className='text-[16px] font-body'>Designing and coding emails for platforms like Mailchimp, Klaviyo, HubSpot, or Salesforce Marketing Cloud.</h1>
         </div>
       
       </div>

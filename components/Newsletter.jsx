@@ -51,7 +51,7 @@ function Newsletter() {
       setAlert({text:"you successfully subscribed to my newsletter!!!",type:"success"})
       setLoading(false)
       }, (error) => {
-      toast.error(`failed to add user to subscribers list`,{className:"dm-mono-regular z-[9999]"})
+      toast.error(`failed to add user to subscribers list`,{className:"font-body z-[9999]"})
       setAlert({text:"failed to add user to subscribers list",type:"error"})
       setLoading(false)
       });
@@ -60,14 +60,14 @@ function Newsletter() {
   }
   return (
     <div className='container form-control gap-2 z-[9999]'>
-      <p className='dm-mono-regular text-[20px] font-bold py-2 capitalize'>subscribe for updates</p>
-    <input value={name} onChange={(e)=>setName(e.target.value)} className='text-[#000] input capitalize dm-mono-regular' placeholder='first name'/> 
-    <input value={last} onChange={(e)=>setLast(e.target.value)} className='text-[#000] input capitalize dm-mono-regular'  placeholder='last name (optional)'/> 
-    <input  value={email} onChange={(e)=>setEmail(e.target.value)} className='text-[#000] input capitalize dm-mono-regular' type='email' placeholder='email address'/> 
+      <p className='font-body text-[20px] font-bold py-2 capitalize'>subscribe for updates</p>
+    <input value={name} onChange={(e)=>setName(e.target.value)} className='text-[#000] input capitalize font-body' placeholder='first name'/> 
+    <input value={last} onChange={(e)=>setLast(e.target.value)} className='text-[#000] input capitalize font-body'  placeholder='last name (optional)'/> 
+    <input  value={email} onChange={(e)=>setEmail(e.target.value)} className='text-[#000] input capitalize font-body' type='email' placeholder='email address'/> 
     {loading2 && (
-<p className={` ${alert.type=="error"?"dm-mono-regular text-[10px] bg-red-500 p-2 rounded-lg":alert.type=="success"?"dm-mono-regular text-[10px] bg-green-500 p-2 rounded-lg":""}`}>{alert.text}</p>
+<p className={` ${alert.type=="error"?"font-body text-[10px] bg-red-500 p-2 rounded-lg":alert.type=="success"?"font-body text-[10px] bg-green-500 p-2 rounded-lg":""}`}>{alert.text}</p>
     )}
-    <button onClick={addSubscriber} className='btn dm-mono-regular capitalize bg-[transparent] border border-[#ffffff] text-[#fff] '> {loading?"please wait...":"submit"}</button> 
+    <button onClick={addSubscriber} className='btn font-body capitalize bg-[transparent] border border-[#ffffff] text-[#fff] '> {loading?"please wait...":"submit"}</button> 
    
    </div> 
   )
