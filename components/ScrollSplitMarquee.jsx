@@ -5,6 +5,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import MarqueeX from './MarqueeX'
 import { useScroll, useTransform ,motion, useMotionTemplate, useMotionValueEvent, useAnimation, useSpring} from 'framer-motion'
+import Section from '@/app/layout/Section'
+import GridColumn from '@/app/layout/GridColumn'
 // import DisplacedParagraph from '@/components/DisplacedParagraph';
 
 
@@ -74,8 +76,11 @@ const curiosity="...lets flip the trend"
     return (
   <div ref={container} className='h-[600vh] '>
       <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
-        <motion.div style={{height}} className='bg-neutral-800 w-full h-[20%] flex items-center justify-center overflow-hidden'>
-<p className='max-w-[24em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.4] text-heading3  text-balance  text-brand-white'>
+        <motion.div style={{height}} className=' w-full h-[20%] flex items-center justify-center overflow-hidden'>
+<Section>
+  <GridColumn>
+<div className='col-span-full lg:col-span-8 lg:col-start-3'>
+<p className='flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.4] text-heading3  text-balance  text-brand-white'>
   {text.map((word,i)=>{
    
 const isAccent1 = accent1Words.includes(word);
@@ -98,6 +103,11 @@ const isAccent2 = accent2Words.includes(word);
     </span>
   })}
 </p>
+
+</div>
+  </GridColumn>
+
+</Section>
 
 {/* <DisplacedParagraph
  text='ddd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.' className='max-w-[30em] text-center font-custom italic text-[clamp(4em,_6vw,_7em)] text-brand-white'>
@@ -124,7 +134,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex
         items-center h-full div2 [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}   >
-        <h2 className='font-custom  flex items-center justify-center
+        <h2 className='font-custom scale-y-[1.8] lg:scale-y-[1] font-bold  flex items-center justify-center
          gap-4 uppercase bgemerald-700 text-brand-black text-heading'>
           {hook}
           
@@ -152,7 +162,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex w-full
         items-center h-inhe  [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}  >
-        <h2 className='font-custom flex items-center justify-center gap-4 uppercase
+        <h2 className='font-custom scale-y-[1.8] lg:scale-y-[1] font-bold flex items-center justify-center gap-4 uppercase
          bgemerald-700 text-brand-black text-heading'> 
           {hook}
            <img src='/images/crypto/tron.svg' className='w-20 h-20'/>

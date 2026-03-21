@@ -92,7 +92,7 @@ export default function Gallery() {
         </div>
 
         <div className="label absolute flex justify-center items-center w-full top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 opacity-0 text-black">
-          <Link href={"#about"} className="block font-custom text-[12vw] lg:text-[5vw] font-bold">
+          <Link href={"#about"} className="block font-custom text-brand-white text-[12vw] lg:text-[5vw] font-bold">
             About Me
           </Link>
         </div>

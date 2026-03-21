@@ -79,7 +79,7 @@ export default function Home() {
     {/* <Texter/> */}
     {/* <OurExpertise/> */}
     {/* <Gallery/> */}
-{/* <ReviewShow/> */}
+<ReviewShow/>
 {/* <Compatibility/> */}
     {/* <HorizontalParallax/> */}
     </SmoothScroll>

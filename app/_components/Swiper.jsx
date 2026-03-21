@@ -130,7 +130,7 @@ const Swiper = () => {
               text='Inspired' 
                initialDelay={0}/>
              </h2>
-        <p className='text-para font-body font-medium text-brand-white mt-[2vw] w-[60%]'>
+        <p className='text-para font-body font-medium text-brand-white mt-[4vw] w-[60%]'>
            <TunderText preloaderOut={true}
               text='A collection of wisdom from great minds to fuel your daily motivation' 
                initialDelay={0.2}/>
