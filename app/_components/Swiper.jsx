@@ -138,7 +138,7 @@ const Swiper = () => {
       </div>
 
       <div className='col-span-full lg:col-start-5 lgcol-span-4 h-full overflow-clip relative'>
-        <div ref={wrapperRef} className='flex h-full items-center will-change-transform'>
+        <div ref={wrapperRef} className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] flex h-full items-center will-change-transform">
           {slidesData.map((slide, index) => {
             return <div
               key={index}

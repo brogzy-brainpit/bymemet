@@ -19,14 +19,16 @@ const parentGrid={
   },
   enter:{
     transition:{
-      staggerChildren:.04,
+      staggerChildren:.06,
       delayChildren:.2,
     }
   },
 }
 const gridChild={
   initial:{
+    // opacity:],
     scaleY:0,
+    // scaleY:[.4,0,1],
     transformOrigin:'bottom',
     transition:{
       duration:.4,
@@ -34,9 +36,10 @@ const gridChild={
     }
   },
   enter:{
-    scaleY:1,
+    opacity:[.1,.25,.4,.25,.15],
+    scaleY:[0,.47,0,1],
     transition:{
-      duration:.4,
+      duration:1,
       ease
     }
   },
@@ -56,18 +59,18 @@ const gridChild={
                    "grid h-full w-full  top-0 left-0 grid-cols-6 lg:grid-cols-12 gap-[1.25em] lg:gap-[1.5em]"
                  }
                >
-                 <motion.div variants={gridChild} className="col-span-1  h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
-                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity-15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1  h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
+                 <motion.div variants={gridChild} className="col-span-1 h-full lg:block hidden bg-brand-accent opacity15"></motion.div>
                </motion.div>
         </Section>
       }
