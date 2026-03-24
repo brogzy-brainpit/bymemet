@@ -25,6 +25,7 @@ import Circular from "@/components/Circular";
 import BrandsGrid from "@/components/BrandsGrid";
 import Swiper from "./_components/Swiper";
 import GridLines from "./_components/GridLines";
+import Showcase from "./_components/Showcase";
 
 
 export default function Home() {
@@ -51,6 +52,7 @@ export default function Home() {
    <Landing inView={inView}/>
    <ScrollSplitMarquee/>
       <Swiper/>
+      <Showcase/>
    {/* <Landing/> */}
    <Circular/>
    <BrandsGrid/>

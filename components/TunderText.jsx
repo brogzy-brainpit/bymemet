@@ -2,13 +2,12 @@ import React, { useMemo, useRef } from 'react'
 import { useInView ,motion} from 'framer-motion'
 import useSplitText from './useSplitText';
 
-function TunderText({text='hello my name is bokchexa?',initialDelay=0, preloaderOut=false}) {
+function TunderText({text='hello my name is bokchexa?',finalColor= '#ffffff',initialDelay=0, preloaderOut=false}) {
     const textContainer= useRef(null)
     // const inView= useInView(textContainer,{once:false,margin:'-120px'})
     const inView= useInView(textContainer,{once:false,margin:'0px'})
     const {letters} =useSplitText(text,'char')
     const lighthning= '#9333EA'
-    const white= '#ffffff'
       const parent={
         initial:{
         },
@@ -30,7 +29,7 @@ function TunderText({text='hello my name is bokchexa?',initialDelay=0, preloader
         },
         enter:{
             opacity:[1,.8,.6,.68,1],
-            color:[white,lighthning,white,lighthning,white],
+            color:[finalColor,lighthning,finalColor,lighthning,finalColor],
             
         },
          exit:{

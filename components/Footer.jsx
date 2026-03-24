@@ -1,77 +1,108 @@
 'use client'
-import { useScroll, useTransform,motion } from 'framer-motion'
-import React, { useRef } from 'react'
-import facebook from "@/assets/facebook.png"
-import instagram from "@/assets/instagram.png"
-import twitter from "@/assets/twitter.png"
-import youtube from "@/assets/youtube.png"
-import Image from 'next/image'
-import Link from 'next/link'
-import Magnetic from '@/effects/Magnetic'
-import Newsletter from './Newsletter'
-function Footer() {
-    const footer=useRef(null)
-    const {scrollYProgress}=useScroll({
-        target:footer,
-        offset:['start end','end end']
-    })
-    const y= useTransform(scrollYProgress,[0,1],[-100,0])
-    // console.log(facebook)
-  return (
-    <motion.div ref={footer} style={{y}} className='py-4 z-[100]  bg-[#121212] '>
-       <div className='container flex-col flex justify-between w-full h-full  items-end'>
-<div className='py-[80px] pb-[30px] flex justify-end'>
-    <h2 className='text-[5vw] capitalize font-custom text-customColor'>
-        its over, lets talk.
-    </h2>
-</div>
+import {motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import Link from 'next/link';
+import Section from '@/app/layout/Section';
+import GridColumn from '@/app/layout/GridColumn';
+import TunderText from './TunderText';
+import MarqueeX from './MarqueeX';
+// import { Mail, Phone } from 'lucide-react';
 
-       <div className='pt-10 flex flex-row w-full gap-2 breaker'>
-    <div className='z-50 flex flex-col breaker-child'>
-    <Newsletter/>     
-      </div>
-      <div className=' px-[2vw] breaker-child'>
-    {/* <h2 className='text-[12px] uppercase flex flex-col gap '>
-        
-        <span className='capitalize  text-[25px]  font-body'>address</span>
-        <span className='capitalize  text-[20px]  font-body'>production headquater</span>
-        <span className='capitalize text-[20px]   font-body'>n0 16 adam way, rigasa. kaduna</span>
-        <span className='capitalize text-[20px]   font-body'>nigeria </span>
-    </h2> */}
-</div>
-</div>
-{/* <div className=''>
-    <h2 className='text-[18px] uppercase flex flex-col '>
-        <span className='uppercase'>Production, direction</span>
-        <span>créative, post-production</span>
-        <span> de vos projets photo et vidéo.</span>
-    </h2>
-</div> */}
-        <div className= 'pt-[20px] w-full  flex justify-between md:flex-row flex-col'>
-        
+
+export default function Footer() {
+    const footerRef=useRef(null)
+      const inView= useInView(footerRef)
+  
+    return (
+        <div ref={footerRef} className='  min-h-[80vh] flex justify-end flex-col relative text-center bg-[#140D07]  py-[4vh] mx-auto'>
+          <MarqueeX numbers={6} speed={100}  className='bgemerald-600 p-2 border-none bg-gree-600' >
+                  <h2  className='scale-y-[1.8] uppercase font-bold tracking-[0.28em] font-custom flex items-center justify-center gap-4
+                    bgemerald-700 text-white'>
+                      <span className=' text-heading' > the End <span className='text-brand-secondary'>•</span> the End <span className='text-brand-secondary'>•</span> </span>
+                    </h2>
+                  </MarqueeX>
+           <Section padding={false} className={'px-5'} >
+            <GridColumn  className={'bg-brand-secondary p-5 rounded-3xl'}>
+               <div className='col-start-1 col-span-5'>
+                 <div className='flex items-start flex-col'>
+                  <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
+                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
+                <TunderText initialDelay={.1} finalColor='#262626' preloaderOut text='About'/>
+                  </motion.h2>
+                  <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
+                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
+                <TunderText initialDelay={.2} finalColor='#262626' preloaderOut text='Blogs'/>
+                  </motion.h2>
+                  <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
+                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
+                <TunderText initialDelay={.3} finalColor='#262626' preloaderOut text='Contact'/>
+                  </motion.h2>
+                 <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
+                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
+                
+                <TunderText initialDelay={.4} finalColor='#262626' preloaderOut text='Services'/>
+                  </motion.h2>
+                </div>
+                </div>
+
+               <div className='lg:col-start-6  col-start-1 col-span-full gap-[10px] md:gap-[30px] flex flex-col'>
+              <div className='lg:flex hidden col-start-1 col-span-2 '>
+<Link href={"https://instagram.com/memet_lab"}>
+         <h2 className='font-custom leading-[.7] text-brand-black text-[4em]'>By Memet<sup className='text-[1.8'>™ </sup></h2>
+        </Link>
+               </div>
+
+              <div className='mt-[8vh] lg:mt-[0vh] flex flex-col'>
+                  <h2 className='font-normal text-para  font-body leading-[1.4em] text-brand-black self-start md:self-end  text-left md:text-right w-[50%]'>BASEd IN MailaUrA,</h2>
+                <h2 className='font-normal text-para  font-body leading-[1.4em] text-brand-black self-start md:self-end  text-left md:text-right w-[50%]'>aBuJa</h2>
+                <h2  className='font-normal text-para  font-body leading-[1.4em] text-brand-black self-start md:self-end  text-left md:text-right w-[50%]'>niGeriA</h2>
+              </div>
+               
+                <div className='flex items-start md:items-end flex-col'>
+                      
+                 <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} className='text-heading2 font-bold leading-[1.1]  tracking-wide flex items-center justify-center font-custom text-brand-black  text-left md:text-right'>
+                 {/* <Phone className='mr-4 w-[30px] h-[30px] md:w-[50px] md:h-[50px] '/> */}
+                  <a href='phone:+2349063260237' className='text-brand-black'>
+                <TunderText initialDelay={.6} finalColor='#262626' preloaderOut text='+234-9063260237'/>
+                  </a>
+                  </motion.h2>
+                <motion.h2 whileHover={{x:6,opacity:.7,cursor:"pointer"}} className='text-heading2 font-bold leading-[1.1]  tracking-wide  flex items-center justify-center font-custom  text-brand-black text-left md:text-right'>
+                  {/* <Mail  className='mr-4 w-[30px] h-[30px] md:w-[50px] md:h-[50px] '/>  */}
+                  <a href='mailto:memetoumar@gmail.com'>
+                <TunderText initialDelay={.7} finalColor='#262626' preloaderOut text='memetoumar@gmail.com'/>
+                  </a>
+                  </motion.h2>
+                </div>
+               </div>
+              
+
+            </GridColumn>
+
+             <div className='container mt-[10px] border-t border-t-gray-800 flex-col flex justify-between mx-auto h-full  items-end'>
+
+               <div className= 'pt-[10px] w-full  flex justify-between md:flex-row gap-4 flex-col'>
             <div>
-              <p className='text-gray-300 capitalize text-[16px] font-body'>socials</p>
+              <p className='text-gray-300 capitalize text-para font-body font-normal text-left '>socials</p>
               <div className='flex gap-3 w-full '>
                 <Link href={"#"}>
-                     {/* <img src={facebook.src} width={20} alt='logo'/> */}
-                     <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>facebook</p>
+                     <p className='text-para font-body text-gray-500 cursor-pointer capitalize font-normal'>facebook</p>
                 </Link>  
-                <Link target='blank' href={"https://www.instagram.com/bokchexa2020/"}>
-                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>instagram</p>
+                <Link target='blank' href={"https://www.instagram.com/"}>
+                    <p className='text-para font-body text-gray-500 cursor-pointer capitalize font-normal'>instagram</p>
                 </Link>
-                <Link target='blank' href={"https://x.com/bok_cheza"}>
-                    <p className='text-[12px] text-gray-500 cursor-pointer capitalize font-body'>twitter</p>
+                <Link target='blank' href={"https://x.com/"}>
+                    <p className='text-para font-body text-gray-500 cursor-pointer capitalize font-normal'>twitter</p>
                 </Link>
               </div>
             </div>
             <div className='flex gap-3'>
             <div >
-            <p className='text-gray-300 cursor-pointer capitalize font-body'>version</p>
+            <p className='text-gray-300 capitalize text-para font-body font-normal text-left '>version</p>
             <div className='flex gap-4'>
-              <p className='text-[12px] text-gray-500 font-body' >
+              <p className='text-para font-body text-gray-500 font-normal' >
                 {new Date().getFullYear()} &copy; Edition
               </p>
-              <p className='text-[12px] text-gray-500  font-body'>
+              <p className='text-para font-body text-gray-500  font-normal'>
               All rights reserved
               </p>
             </div>
@@ -79,9 +110,8 @@ function Footer() {
 
             </div>
         </div>
-        </div> 
-        </motion.div>
-  )
-}
-
-export default Footer
+        </div>
+           </Section>   
+        </div>
+    )
+  }

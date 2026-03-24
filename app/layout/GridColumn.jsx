@@ -4,7 +4,7 @@ import clsx from "clsx";
 function GridColumn({ children,gridLines=false, className }) {
   return (
  <div className="h-full w-full relative">
-    <div
+    <div 
       className={clsx(
         "grid  grid-cols-6 lg:grid-cols-12 gap-[1.25em] lg:gap-[1.5em]",
         className
