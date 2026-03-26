@@ -37,9 +37,9 @@ function TunderText({text='hello my name is bokchexa?',finalColor= '#ffffff',ini
         },
       }
   return (
-    <motion.span className=' flex flex-wrap justify-cente'  ref={textContainer} variants={parent} initial='initial' animate={inView && preloaderOut?'enter':'initial'} exit='exit'>
+    <motion.span className=' flex flex-wrap justify-cente whitespace-nowrap'  ref={textContainer} variants={parent} initial='initial' animate={inView && preloaderOut?'enter':'initial'} exit='exit'>
 {letters.map((l,i)=>{
-    return <motion.span  variants={item} key={i}>
+    return <motion.span className=' inline-block whitespace-nowrap'  variants={item} key={i}>
          {l.char}
         </motion.span>
 })}

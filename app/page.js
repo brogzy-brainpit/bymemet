@@ -44,7 +44,7 @@ export default function Home() {
   },[])
   return (
    <div className="relativ">
-    <GridLines inView={inView} />
+    {/* <GridLines inView={inView} /> */}
     <AnimatePresence mode="wait">
     {isLoading &&< Preloader/>}
     </AnimatePresence>
@@ -56,17 +56,6 @@ export default function Home() {
    {/* <Landing/> */}
    <Circular/>
    <BrandsGrid/>
-   <LandingTrusted text companies={[
-  {img:"https://emailsyall.com/wp-content/uploads/2023/09/home_chef_ey.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2023/09/cameo_ey.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2023/09/fundrise_ey.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2023/09/mosaic_ey.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2021/12/ey_girl_scouts.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2020/09/npr_logo.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2023/09/south_dakota_ey.png"},
-  {img:"https://emailsyall.com/wp-content/uploads/2021/12/ey_discovery.png"},
-  
-]}/>
 
 {/* 
     <SlidingImages/>

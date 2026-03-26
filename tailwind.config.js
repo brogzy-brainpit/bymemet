@@ -38,7 +38,7 @@ module.exports = {
            'heading2': 'clamp(3.8em, 9vw, 9em)',
            'heading3': 'clamp(1.5em, 2.4vw, 7.5em)',
            'display': 'clamp(130px, 33vw, 490px)',
-           'para': 'clamp(1em, 1vw, 1.2em)',
+           'para': 'clamp(1.2em, 1vw, 1.4em)',
         'button': 'clamp(14px, 3.5vw, 18px)',
       },
       fontFamily:{

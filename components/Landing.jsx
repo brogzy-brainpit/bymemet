@@ -58,6 +58,9 @@ const landingInView= useInView(landingRef,{once:false})
       </div>
         </motion.div>
 <h2 className='text-para Font-body'>
+  {/* <SlideUpText gap='.44em' preloaderOut={inView}
+     text="I help SaaS startups and growing brands gain an unfair advantage with premium, high-performing email experiences."
+                 initialDelay={0}/> */}
   <TunderText preloaderOut={inView}
      text="I help SaaS startups and growing brands gain an unfair advantage with premium, high-performing email experiences."
                  initialDelay={0}/>

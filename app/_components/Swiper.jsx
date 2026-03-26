@@ -5,6 +5,7 @@ import React, { useRef, useEffect } from 'react'
 import Core from 'smooothy'
 import Section from '../layout/Section';
 import GridColumn from '../layout/GridColumn';
+import SlideUpText from '@/effects/SlideUpText';
 
 const slidesData = [
   { text: "Success is not final, failure is not fatal: it is the courage to continue that counts. Every setback is a setup for a comeback.", username: "@john_doe", color: '#FFFF00' },
@@ -122,13 +123,9 @@ const Swiper = () => {
         <GridColumn>
       <div className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
         <h2 className='text-heading text-left text-brand-white font-custom uppercase leading-[.8]'>
-             <TunderText preloaderOut={true}
-              text='Star' 
-               initialDelay={0}/>
-               
-                <TunderText preloaderOut={true}
-              text='Inspired' 
-               initialDelay={0}/>
+      <SlideUpText once={false} preLoaderOut text={'Star'}/>
+      <SlideUpText once={false} preLoaderOut text={'Inspired'}/>
+       
              </h2>
         <p className='text-para font-body font-medium text-brand-white mt-[4vw] w-[60%]'>
            <TunderText preloaderOut={true}
