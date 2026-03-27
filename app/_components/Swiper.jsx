@@ -122,11 +122,12 @@ const Swiper = () => {
       <Section >
         <GridColumn>
       <div className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
-        <h2 className='text-heading text-left text-brand-white font-custom uppercase leading-[.8]'>
-      <SlideUpText once={false} preLoaderOut text={'Star'}/>
-      <SlideUpText once={false} preLoaderOut text={'Inspired'}/>
-       
+        <h2 className='text-heading text-left text-brand-white font-custom capitalize leading-[.8]'>
+      <SlideUpText once={false} preLoaderOut text={'free'}/>
              </h2>
+        <h2 className='text-heading text-left text-brand-white font-custom uppercase leading-[.8]'>
+      <SlideUpText once={false} preLoaderOut text={'samples'}/>
+      </h2>
         <p className='text-para font-body font-medium text-brand-white mt-[4vw] w-[60%]'>
            <TunderText preloaderOut={true}
               text='A collection of wisdom from great minds to fuel your daily motivation' 

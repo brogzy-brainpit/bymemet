@@ -59,7 +59,7 @@ const Mrq2 = useMotionTemplate`
 `;
   
    const height= useTransform(scrollYProgress,[0,.65],['0%','99%'])
-    const  text= 'Low engagement shouldn’t be the norm. I design results-driven email experiences that connect with your audience, boost interaction, and turn passive readers into subscribers who open, click, and convert.'.split(' ')
+    const  text= 'I design results-driven email experiences that connect with your audience, boost interaction, and turn passive readers into subscribers who open, click, and convert.'.split(' ')
 
   const accent1Words = [
   "results-driven",
@@ -72,7 +72,7 @@ const Mrq2 = useMotionTemplate`
   "click,"
 ];
 const hook="About Me"
-const curiosity="...lets flip the trend"
+const curiosity="...i design i code i test"
     return (
   <div ref={container} className='h-[600vh] '>
       <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
@@ -122,8 +122,16 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
  <MarqueeX numbers={6} speed={-speed1}  className='border-none bg-gree-600' >
         <h2 className=' font-custom italic flex items-center justify-center gap-4
          uppercase bgemerald-700 text-brand-white text-[clamp(4em,_6vw,_7em)]'>
-           {curiosity}
-           <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
+           {/* {curiosity} */}
+           i design
+    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
+      i code
+    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
+     i test
+    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
+     i fix
+    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
+
            {/* Email Developer  */}
           </h2>
         </MarqueeX>

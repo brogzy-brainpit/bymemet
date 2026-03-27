@@ -21,7 +21,6 @@ import ReviewShow from '@/app/_components/Reviews';
 import Compatibility from "./_components/Compatibility";
 import LandingTrusted from "@/components/LandingTrusted";
 import ScrollSplitMarquee from "@/components/ScrollSplitMarquee";
-import Circular from "@/components/Circular";
 import BrandsGrid from "@/components/BrandsGrid";
 import Swiper from "./_components/Swiper";
 import GridLines from "./_components/GridLines";
@@ -51,18 +50,19 @@ export default function Home() {
     <SmoothScroll>
    <Landing inView={inView}/>
    <ScrollSplitMarquee/>
-      <Swiper/>
+   <Services/>
       <Showcase/>
-   {/* <Landing/> */}
-   <Circular/>
+      <Swiper/>
+   <ReviewShow/>
    <BrandsGrid/>
 
+
+   
 {/* 
     <SlidingImages/>
-   <Services/>
+   <Parallax/> 
    <Projects header/>
    <RecentWorks/>
-   <Parallax/> */}
     {/* <Custom/> */}
    {/* <TwoImages/> */}
    {/* <Images/> */}
@@ -70,7 +70,6 @@ export default function Home() {
     {/* <Texter/> */}
     {/* <OurExpertise/> */}
     {/* <Gallery/> */}
-<ReviewShow/>
 {/* <Compatibility/> */}
     {/* <HorizontalParallax/> */}
     </SmoothScroll>

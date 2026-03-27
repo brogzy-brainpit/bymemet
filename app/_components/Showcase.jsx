@@ -27,8 +27,19 @@ const Service=()=>{
    });  
 
     return(
-       <div ref={containerRef} className={''}>
-         <Section padding={false} className={'px-5 bg-red800 relative flex justify-center items-center gap-10 flex-col'}>
+       <div ref={containerRef} className={'mb-[25vh]'}>
+         <Section padding className={'px5 bg-red800 relative flex justify-center items-center gap-10 flex-col'}>
+       <GridColumn>
+       <div className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
+              <h2 className='text-heading2 text-left text-brand-white font-custom uppercas leading-[.8]'>
+            <SlideUpText once={false} preLoaderOut text={'Recent'}/>
+                   </h2>
+             
+              <h2 className='text-heading text-left text-brand-white font-custom uppercase leading-[.8]'>
+            <SlideUpText once={false} preLoaderOut text={'Projects'}/>
+            </h2>
+            </div>
+       </GridColumn>
 {cards.map((card,index)=>{
    const targetScale= 1-((cards.length - index) *0.05)
    return <Card {...card} key={index} i={index} progress={scaleCard} range={[index*0.25,1]} targetScale={targetScale}/>

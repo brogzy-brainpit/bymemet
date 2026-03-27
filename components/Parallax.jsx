@@ -6,10 +6,10 @@ function Parallax() {
     <div className='container overflow-hidden flex gap-3 flex-col'>
         
         <div className='flex gap-4 w-full'>
-                <ImageCont url={"http://res.cloudinary.com/brainpit/image/upload/v1719244549/ijs1iq1repvj1fo27dnl.png"}/>
-                <ImageCont url={"http://res.cloudinary.com/brainpit/image/upload/v1719244640/xlxr0mugh9v6cxzc3rmo.png"}/>
-                <ImageCont url={"http://res.cloudinary.com/brainpit/image/upload/v1719132204/wsknninw7lbfzomkdg4j.png"}/>
-                <ImageCont url={"http://res.cloudinary.com/brainpit/image/upload/v1719131899/jzznhogvalzzufx06wth.png"}/>
+                <ImageCont url={"/images/free.jpg"}/>
+                <ImageCont url={"/images/free.jpg"}/>
+                <ImageCont url={"/images/free.jpg"}/>
+                <ImageCont url={"/images/free.jpg"}/>
             
         </div>
         <div className='flex gap-4 w-full min-h-[100vh]'>
