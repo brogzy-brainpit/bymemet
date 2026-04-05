@@ -3,7 +3,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import path from "../../assets/PATH.png"
-import comrad from "../../assets/COMRAD.png"
+import comrad from "../../assets/comrad.png"
 import joymode from "../../assets/JOYMODE.png"
 const slider1 = [
     {
