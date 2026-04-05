@@ -2,10 +2,12 @@
 
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { AnimatePresence, motion } from "framer-motion"
 import {memet} from '../../data'
 import Image from "next/image"
 import Link from "next/link"
-export default function Gallery() {
+import PreloaderIntro from "@/components/preloader/PreloaderIntro"
+export default function Gallery({isLoading}) {
 
   const container = useRef(null)
 
@@ -67,7 +69,7 @@ export default function Gallery() {
     })
 
   }, [])
-
+const MotionImage= motion(Image)
   return (
 
     <div
@@ -75,9 +77,26 @@ export default function Gallery() {
       className=" mx-auto"
     >
 
-      <div className="tile relative rounded-full aspect-[4/4] overflow-hidden ">
-      <Image alt='memet oumar aka bokchexa' src={memet} className='aspect-[4/4] object-cover w-[15em] rounded-full' />
-        <div className="absolute inset-0 pointer-events-none flex items-center justify-center scale-[1.5]">
+      <div  className="tile relative rounded-full aspect-[4/4] overflow-hidde ">
+   <AnimatePresence mode="wait">
+  {isLoading ? (
+    <div className='mx-auto fixed top-0 inset-0 z-[999999999999] h-svh bgslate-500 flex items-center justify-center w-full '>
+             <PreloaderIntro/>
+             </div>
+  ) : (
+          <MotionImage transition={{
+    
+    layout: {
+      duration: 1.2,
+      ease: [0.9, 0, 0.1, 1],
+    },
+  }}  layoutId='logos'  alt='memet oumar aka bokchexa' src={memet} className='object-[50%_20%] relative z-[999999999999] aspect-[4/4] object-cover w-[15em] rounded-full' />
+
+  )}
+</AnimatePresence>
+      {/* <MotionImage layoutId='logos'  alt='memet oumar aka bokchexa' src={memet} className='aspect-[4/4] object-cover w-[15em] rounded-full' /> */}
+ 
+        {/* <div className="absolute inset-0 pointer-events-none flex items-center justify-center scale-[1.5]">
           <svg viewBox="0 0 2453 2273" className="absolute w-full h-full">
             <path
               className="path"
@@ -95,7 +114,7 @@ export default function Gallery() {
           <Link href={"#about"} className="block font-custom text-brand-white text-[12vw] lg:text-[5vw] font-bold">
             About Me
           </Link>
-        </div>
+        </div> */}
 
       </div>
 

@@ -6,7 +6,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Rounded from "../common/RoundedButton";
 import {
-   free,ele,memet
+   free,ele,memet,
+   accent
   
 } from '../data'
 import {motion, useScroll, useTransform,useInView} from 'framer-motion'
@@ -20,7 +21,7 @@ import GridColumn from '@/app/layout/GridColumn';
 import Gallery from '@/app/_components/Gallery';
 import TunderText from './TunderText';
 function Landing
-({inView}) {
+({inView,isLoading}) {
 const landingRef= useRef(null)
 const landingInView= useInView(landingRef,{once:false})
     const [speed1, setSpeed1] = useState(100)
@@ -38,7 +39,7 @@ const landingInView= useInView(landingRef,{once:false})
    <div ref={landingRef} className="h-svh bg-pink400 relative flex justify-between flex-col overflow-x-clip">
      <Nav inView={inView && landingInView}/>
    {/* <Section container={false} padding={false} > */}
-     <motion.div initial={{x:400}} animate={{x:inView?0:400}} transition={{ease:'easeInOut',duration:1.6}}>
+     <motion.div initial={{x:600}} animate={{x:inView?0:600}} transition={{ease:'easeInOut',duration:1.8}}>
         <MarqueeX numbers={6} speed={speed1}  className='bgemerald-600 p-2 border-none bg-gree-600' >
         <h2  className='scale-y-[1.8] uppercase font-bold tracking-[0.28em] font-custom flex items-center justify-center gap-4
           bgemerald-700 text-white'>
@@ -58,14 +59,9 @@ const landingInView= useInView(landingRef,{once:false})
       </div>
         </motion.div>
 <h2 className='text-para Font-body'>
-  {/* <SlideUpText gap='.44em' preloaderOut={inView}
+  <SlideUpText delay={.001} gap='.44em' preloaderOut={inView}
      text="I help SaaS startups and growing brands gain an unfair advantage with premium, high-performing email experiences."
-                 initialDelay={0}/> */}
-  <TunderText preloaderOut={inView}
-     text="I help SaaS startups and growing brands gain an unfair advantage with premium, high-performing email experiences."
-                 initialDelay={0}/>
-         {/* <SlideUpText y='-10%' gap='.6em'  delay={.001} initialDelay={1} preLoaderOut={inView}
-/> */}
+                 initialDelay={3.5}/>
 </h2>
 
     {/* <SlideUpSolo slideUp={slideUp} inView={inView} y='-10%' duration={0.1}  className={`capitalize  inline-flex overflow-hidden  text-para  leading-[] text-customColor font-body`} text={"i help growing brands and startups gain an unfair advantage through premium, results driven email templates"} fontSize={96} /> */}
@@ -74,10 +70,10 @@ const landingInView= useInView(landingRef,{once:false})
              {/* <button class="button-49 font-body my-[20px]" role="button">my works</button> */}
              <div class="my-[20px] flex gap-[20px]">
     
-             <Rounded backgroundColor='#7461C3'>
+             <Rounded backgroundColor={accent}>
                   <Link href="/works" className='font-body h-full w-full  text-brand-white'>My work</Link>
                 </Rounded>
-                <Rounded secondary={true} backgroundColor='#7461C3'>
+                <Rounded secondary={true} backgroundColor={accent}>
                   <Link target='blank' href="https://www.figma.com/design/KCs3m76HBZKEPwk0CMAfYq/designs-by-Memet?node-id=0-1&t=0ciGeZJIRFvBLT7z-1" className='font-body '>designs only</Link>
                 </Rounded>
              </div>
@@ -85,12 +81,10 @@ const landingInView= useInView(landingRef,{once:false})
       </div>
 
       <div className='relative col-span-3 lg:col-span-4 bgred-600 flex justify-center '>
-           {/* <Magnetic className="flex justify-center">
-           </Magnetic> */}
-          <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"exit"} exit="exit"   className='w-[100%] h-[auto] flex justify-center overflow-hidden rounded-[16px'>
-            {/* <Image alt='memet oumar aka bokchexa' src={ele} className='object-cover' /> */}
-         <Gallery/>
-          </motion.div>
+          {/* <motion.div  variants={slideUp}  initial="initial" animate={inView?"enter":"enter"} exit="exit"   className='w-[100%] h-[auto] flex justify-center overflowhidden rounded-[16px'> */}
+          <div className='w-[100%] h-[auto] flex justify-center overflowhidden rounded-[16px'>
+         <Gallery isLoading={isLoading}/>
+          </div>
         </div>
   </GridColumn>
 </Section>

@@ -10,8 +10,9 @@ import {
     floating6, 
     floating7, 
     floating8, 
-  
+  memet
 } from '../../data'
+import Image from 'next/image'
 const textOpacity={
     initial:{
        opacity: 0,
@@ -42,35 +43,37 @@ const menuSlide={
 
     },
 }
-function PreloaderIntro() {
-    const [index,setIndex]=useState(0)
-    const words=['hello','bonjour','مرحبًا','你好','नमस्ते', 'привет', 'welcome']
-    // const positions= [{left:"54%",top:"60%"},{left:"60vw",top:"-5vh"}, {left:"4%",top:"5%"},{left:"90%",top:"50%"},{left:"90%",top:"3%"},{left:"40%",top:"80%"},{left:"60%",top:"5vh"},]
-        const images=[floating1,floating2,floating3,floating4,floating5,floating6,floating7,]
-    useEffect(()=>{
-        if(index==words.length-1) return 
-        console.log("running")
-        setTimeout(() => {
-            setIndex(index+1)
-        }, index==0?1400:170);
-    },[index])
+ const clippedImage={
+    initial:{
+      clipPath: 'inset(100% 0 0 0)',
+    },
+    enter:{
+        clipPath: 'inset(0 0 0 0)',
+       transition:{
+        // delay:1,
+        duration:1.8,
+      ease: [0.9, 0, 0.1, 1],
+
+      }
+    },
+  }
+function PreloaderIntro() {   
+    const MotionImage=motion(Image)
   return (
-    <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-preloader  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-transparent'> 
-   <div className='h-full w-full relative flex items-center justify-center flex-col'>
-   <motion.p className='text-heading text-brand-black capitalize font-custom' variants={textOpacity} animate="enter" initial="initial" exit="exit">
-    {words[index]}
-    </motion.p>
+    <div  initial="initial" exit="exit" className=' z-preloader  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-transparent'> 
 
-    {/* <motion.div style={{left:positions[index].left,top:positions[index].top}} className='absolute'>
-    <Image className='w-[200px] z-20' src={images[index]}/>
-    </motion.div> */}
-   </div>
- {/* <div className=' w-full  h-[14px] mt-[10vh] relative  '>
-<div style={{borderRadius:"0% 0% 50% 50%"}} className='absolute top-0 left-[-0%] w-[110%] h-[1200%] bg-slate-400  '>f</div>
- f
- </div> */}
+    <div  className="h-full w-full relative flex items-center justify-center flex-col tile rounded-full aspect-[4/4] overflow-hidden ">
+         <MotionImage variants={clippedImage} animate={'enter'} initial={'initial'} transition={{
+    layout: {
+      duration: 1.2,
+      ease: [0.9, 0, 0.1, 1],
+    },
+  }}  layoutId='logos' alt='memet oumar aka bokchexa' src={memet} className='object-[50%_20%] aspect-[4/4] object-cover w-[15em] rounded-full' />   
+        
+        </div>
+ 
 
-     </motion.div>
+     </div>
   )
 }
 

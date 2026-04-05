@@ -6,22 +6,22 @@ import React, { useRef } from 'react'
 
 function Services() {
   return (
-<div >
+<div id='services' >
 <Section>
 <GridColumn className={'mb-10'}>
   <div className='col-span-full'>
 <h1 once={true}  className="text-heading leading-[.8] mb-4 font-custom">
-    <SlideUpText once={false} initialDelay={.4}  text={'How i can Help?'}/>
+    <SlideUpText once={false}   text={'How i can Help?'}/>
     </h1>
   </div>
 <div className='row-start-2 col-span-2 lg:col-span-4'>
 <h1 once={true}  className=" text-brand-secondary text-heading3 mb-4 font-body">
-        <SlideUpText initialDelay={.6} once={false} className="leading-[1] inline-flex overflow-hidden text-[20px] text-brand-secondary font-body" text={"(Services)"}/>
+        <SlideUpText  once={false} className="leading-[1] inline-flex overflow-hidden text-[20px] text-brand-secondary font-body" text={"(Services)"}/>
 </h1>
 </div>
 <div className='lg:col-start-7 col-span-4 lg:col-span-5'>
   <h1 once={false}  className=" text-brand-white text-para mb-4 font-body">
-        <SlideUpText  initialDelay={1} once={false} delay={.0002} className="leading-[1] inline-flex overflow-hidden text-para text-customColor font-body" text={"frustrated with emails that don't reflect your brand or drive growth? i craft premium email experiences that captivate and help you focus on growing your business."}/>
+        <SlideUpText  once={false} delay={.0002} className="leading-[1] inline-flex overflow-hidden text-para text-customColor font-body" text={"frustrated with emails that don't reflect your brand or drive growth? i craft premium email experiences that captivate and help you focus on growing your business."}/>
 </h1>
 </div>
 

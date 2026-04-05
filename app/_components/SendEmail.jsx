@@ -1,53 +1,73 @@
-'use client'
-import React, { useState } from 'react'
-import { KlaviyoCode } from './emails.jsx';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
+"use client"
+import { useState } from "react"
 
-function SendEmail(newContent) {
-    const [html, setHtml] =useState("")
-    const [email, setEmail] =useState("")
-    const [preview, setPreview] =useState("preview goes here")
-    const [isSending, setIsSending] =useState(false)
-    async function sendMail(){
-        setHtml(KlaviyoCode(newContent,newContent?.body.links,preview))
-        if(html && email){
-          setIsSending(true)
-          await axios.post("/mail",{
-            ht:html,
-            subject:"template testing from memet O.",
-            mailList:"dangabarin2020@gmail.com",
-            preview
-          }).then(res=>{
-            setIsSending(false)
-        toast.success("email sent successfully,check your inbox, or spam folder",{bodyStyle:{fontFamily:"'Roboto'",textTransform:"capitalize",fontSize:"13px",fontWeight:"600",}})
-           
-           })
-           .catch(err=>{
-              toast.error("something went wrong sending emails to test recipients email, please try again!!! ",{bodyStyle:{fontFamily:"'Poppins','Roboto'",textTransform:"capitalize",fontSize:"13px",fontWeight:"600"}})
-          //  console.log(err)
-          setIsSending(false)
-          setTimeout(()=>{
-            setHide(true)
-          },3000)
-      
-      
-           })
-        }else{
-          toast.error("please provide recipients email or subject first!!!",{bodyStyle:{zIndex:"2000 !important",fontFamily:"'Poppins','Roboto''",textTransform:"capitalize",fontSize:"13px",fontWeight:"600"}})
-      
-        }
+export default function SendEmail({ newContent,name }) {
+  const [email, setEmail] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState("")
+
+  const handleSend = async () => {
+    if (!email) return alert("Enter email")
+
+    setLoading(true)
+    setStatus("Generating...")
+
+    try {
+      const res = await fetch("/api/mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ newContent }),
+      })
+
+      const data = await res.json()
+   console.log('here it is')
+   console.log(data.html)
+      const sendRes = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: email,
+          html: data.html,
+          name: name,
+        }),
+      })
+
+      const sendData = await sendRes.json()
+
+      if (sendData.success) {
+        setStatus("✅ Sent")
+      } else {
+        setStatus("❌ Failed")
       }
-   
-      
-  return (
-    <div className='topper  overflow-hidden w-full text-[11px] p-[10px] gap-2 absolute top-[0px] flex flex-col bg-[rgba(91,90,90,0.72)] h-full items-center justify-center'>
+    } catch (err) {
+      setStatus("❌ Error")
+    }
 
-    <input type='email'  className='input max-w-[95%] font-body text-stone-950' placeholder='enter email'/>
-    <button onClick={(e)=>{sendTest(newContent)}} className='btn bg-[#1183AE] text-[#ffffff] border-0 hover:bg-[#000]  border-[none] font-body'>send test</button>
+    setLoading(false)
+  }
+
+  return (
+    <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(0,0,0,0.7)] gap-2 p-2">
+      <input
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter email"
+        className="w-full p-2 text-black text-sm"
+      />
+
+      <button
+        onClick={handleSend}
+        disabled={loading}
+        className="bg-white text-black px-3 py-1 text-sm"
+      >
+        {loading ? "Sending..." : "Send"}
+      </button>
+
+      <p className="text-white text-xs">{status}</p>
     </div>
   )
 }
-
-export default SendEmail

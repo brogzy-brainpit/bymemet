@@ -43,21 +43,24 @@ export default function Home() {
   },[])
   return (
    <div className="relativ">
+    <SmoothScroll>
     {/* <GridLines inView={inView} /> */}
     <AnimatePresence mode="wait">
-    {isLoading &&< Preloader/>}
+    {isLoading &&< Preloader key={'preloader001'} isLoading={isLoading}/>}
     </AnimatePresence>
-    <SmoothScroll>
-   <Landing inView={inView}/>
+    
+   <Landing isLoading={isLoading} inView={inView}/>
    <ScrollSplitMarquee/>
    <Services/>
       <Showcase/>
       <Swiper/>
-   <ReviewShow/>
-   <BrandsGrid/>
+      
+   {/* <Texter/> */}
+   {/* <ReviewShow/> */}
+   {/* <BrandsGrid/> */}
 
 
-   
+
 {/* 
     <SlidingImages/>
    <Parallax/> 
@@ -67,7 +70,6 @@ export default function Home() {
    {/* <TwoImages/> */}
    {/* <Images/> */}
     {/* <div className="h-[50vh]"></div> */}
-    {/* <Texter/> */}
     {/* <OurExpertise/> */}
     {/* <Gallery/> */}
 {/* <Compatibility/> */}

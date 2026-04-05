@@ -2,14 +2,7 @@ import React, { useRef } from 'react';
 import "./images.css"
 import Image from 'next/image';
 import {
-    floating1, 
-    floating2, 
-    floating3, 
-    floating4, 
-    floating5, 
-    floating6, 
-    floating7, 
-    floating8, 
+   memet
   
 } from '../data'
 import {motion, useScroll, useTransform,useInView} from 'framer-motion'
@@ -33,22 +26,22 @@ your projects photo And video.
       <div ref={cont} className='grid-images'>
         <div className='bg-slate-400 overflow-hidden'>
             <motion.div style={{scale}}>
-            <Image src={floating1} alt='image' className='w-full h-[50vh] object-cover'/>
+            <Image src={memet} alt='image' className='w-full h-[50vh] object-cover'/>
             </motion.div>
         </div>
         <div className='bg-slate-400 overflow-hidden'>
             <motion.div style={{scale}}>
-            <Image src={floating5} alt='image' className='w-full h-[50vh] object-cover'/>
+            <Image src={memet} alt='image' className='w-full h-[50vh] object-cover'/>
             </motion.div>
         </div>
         <div className='bg-slate-400 overflow-hidden'>
             <motion.div style={{scale}}>
-            <Image src={floating2} alt='image' className='w-full h-[50vh] object-cover'/>
+            <Image src={memet} alt='image' className='w-full h-[50vh] object-cover'/>
             </motion.div>
         </div>
         <div className='bg-slate-400 overflow-hidden'>
             <motion.div style={{scale}}>
-            <Image src={floating4} alt='image' className='w-full h-[50vh] object-cover'/>
+            <Image src={memet} alt='image' className='w-full h-[50vh] object-cover'/>
             </motion.div>
         </div>
         

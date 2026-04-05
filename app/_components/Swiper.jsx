@@ -1,27 +1,34 @@
 'use client'
 
 import TunderText from '@/components/TunderText';
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect,useState } from 'react'
 import Core from 'smooothy'
 import Section from '../layout/Section';
 import GridColumn from '../layout/GridColumn';
 import SlideUpText from '@/effects/SlideUpText';
+import { memet,evepra,tour,homely,homestore } from '@/data';
+import Image from 'next/image';
+import {motion, useTransform} from 'framer-motion';
+import useMouse from '@/Hooks/useMouse';
 
 const slidesData = [
-  { text: "Success is not final, failure is not fatal: it is the courage to continue that counts. Every setback is a setup for a comeback.", username: "@john_doe", color: '#FFFF00' },
-  { text: "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.", username: "@jane_smith", color: '#55DB9C' },
-  { text: "Believe you can and you're halfway there. Your limitation—it's only your imagination. Push yourself, because no one else is going to do it for you.", username: "@mike_wilson", color: '#E9CCFF' },
-  { text: "It does not matter how slowly you go as long as you do not stop. The journey of a thousand miles begins with a single step. Keep moving forward.", username: "@sarah_jones", color: '#FB4903' },
-  { text: "Everything you've ever wanted is on the other side of fear. Don't be afraid to give up the good to go for the great. Take risks and embrace the unknown.", username: "@alex_brown", color: '#FFFFFF' },
-  { text: "The future belongs to those who believe in the beauty of their dreams. Dream big, work hard, stay focused, and surround yourself with good people.", username: "@emma_davis", color: '#4DA2FF' },
-  { text: "In the middle of difficulty lies opportunity. Challenges are what make life interesting and overcoming them is what makes life meaningful.", username: "@chris_taylor", color: '#E9CCFF' },
-  { text: "The greatest glory in living lies not in never falling, but in rising every time we fall. Strength doesn't come from what you can do, it comes from overcoming the things you once thought you couldn't.", username: "@lisa_martin", color: '#FB4903' },
-  { text: "Your time is limited, don't waste it living someone else's life. Have the courage to follow your heart and intuition. They somehow already know what you truly want to become.", username: "@david_lee", color: '#55DB9C' },
-  { text: "The only impossible journey is the one you never begin. Start where you are, use what you have, do what you can. Progress, not perfection, is what matters.", username: "@amy_chen", color: '#FFB347' },
+  { url:homestore, username: "@john_doe", color: '#FFFF00' },
+  { url: tour, username: "@jane_smith", color: '#55DB9C' },
+  { url:homely, username: "@mike_wilson", color: '#E9CCFF' },
+  { url: evepra, username: "@sarah_jones", color: '#FB4903' },
+  { url:tour, username: "@alex_brown", color: '#FFFFFF' },
+  { url:evepra , username: "@emma_davis", color: '#4DA2FF' },
+  { url: homestore, username: "@chris_taylor", color: '#E9CCFF' },
+  { url:homely, username: "@lisa_martin", color: '#FB4903' },
+  { url:tour, username: "@david_lee", color: '#55DB9C' },
+  { url: evepra, username: "@amy_chen", color: '#FFB347' },
 ];
 
 const Swiper = () => {
-
+  const [scale,setScale]=useState(false)
+ const {x,y}=useMouse({start:{x:480,y:300},stiffness:140,damping:18,mass:0.1})
+const newX= useTransform(x,x=>x-50)
+const newY= useTransform(y,x=>x-50)
   const wrapperRef = useRef(null);
 
   useEffect(()=>{
@@ -121,34 +128,31 @@ const Swiper = () => {
     <div className='min-h-screen '>
       <Section >
         <GridColumn>
-      <div className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
+      <div id='samples' className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
         <h2 className='text-heading text-left text-brand-white font-custom capitalize leading-[.8]'>
       <SlideUpText once={false} preLoaderOut text={'free'}/>
              </h2>
         <h2 className='text-heading text-left text-brand-white font-custom uppercase leading-[.8]'>
       <SlideUpText once={false} preLoaderOut text={'samples'}/>
       </h2>
-        <p className='text-para font-body font-medium text-brand-white mt-[4vw] w-[60%]'>
-           <TunderText preloaderOut={true}
-              text='A collection of wisdom from great minds to fuel your daily motivation' 
-               initialDelay={0.2}/>
-          </p>
+        <h2 className='text-para font-body font-medium text-brand-white mt-[4vw] w-[60%]'>
+      <SlideUpText once={false} preLoaderOut text='A collection of email templates i crafted to fuel your daily inspiration' />
+          </h2>
       </div>
 
-      <div className='col-span-full lg:col-start-5 lgcol-span-4 h-full overflow-clip relative'>
-        <div ref={wrapperRef} className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] flex h-full items-center will-change-transform">
+      <div onMouseEnter={()=>{setScale(true)}} onMouseLeave={()=>{setScale(false)}} className='col-span-full lg:col-start-5 lgcol-span-4 h-full overflow-clip relative'>
+        <motion.div animate={{scale:scale?1:0}} style={{x:newX,y:newY}} className='z-10 font-body pointer-events-none bg-brand-secondary text-brand-black font-medium capitalize mixblend-difference fixed flex items-center justify-center top-0 left-0 h-[80px] w-[80px] rounded-full overflow-hidden '>
+{/* <img src={"https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg"}  className="w-[120px] h-[120px] object-cover"/> */}
+drag
+      </motion.div>
+        <div ref={wrapperRef} className="cursor[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] flex h-full items-center will-change-transform">
           {slidesData.map((slide, index) => {
-            return <div
-              key={index}
-              className={`shrink-0 pointer-events-none  w-[12em] h-[16em] lg:w-[20em] lg:h-[30em] rounded-[2vw] flex flex-col justify-between p-[2vw] ${index < slidesData.length -1 ? 'mr-[1vw]' : ''}`}
-              style={{
-                backgroundColor: slide.color,
-                border: '2px solid rgba(0, 0, 0, 0.6)'
-              }}
-            >
-              <p className='text-para font-body font-medium leading-tight text-brand-black'>{slide.text}</p>
-              <p className='text-heading3 font-custom font-bold tracking-[.08em] text-brand-black'>{slide.username}</p>
-            </div>
+            return  <div key={index} className={`shrink-0 pointer-events-none overflow-hidden  w-[10em] h-[30em] lg:w-[20em] lg:h-[33em] rounded-[2vw] flex flex-col justify-between ${index < slidesData.length -1 ? 'mr-[1vw]' : ''}`}>
+                <div className='w-full h-full  rounded-xl'>
+                <Image className='object-cover h-full w-full' src={slide.url}/>
+                </div>
+                 
+                </div>
           })}
         </div>
       </div>

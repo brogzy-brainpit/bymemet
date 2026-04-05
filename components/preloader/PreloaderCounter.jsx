@@ -36,8 +36,8 @@ animate(loading,100,{delay:.2,duration:2,ease})
         clipPath: 'inset(0 0 100% 0)',
       // scale:2,
        transition:{
-        delay:1,
-        duration:2.8,
+        // delay:1,
+        duration:1.2,
         ease,
       }
     },

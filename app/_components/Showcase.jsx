@@ -1,12 +1,16 @@
 'use client'
 import {useRef, useState } from 'react'
-import img1 from "../../assets/rhino03.jpg"
-import img2 from "../../assets/tiger04.jpg"
-import img3 from "../../assets/giraffe03.jpg"
+// import img1 from "../../assets/rhino03.jpg"
+// import img2 from "../../assets/tiger04.jpg"
+// import img3 from "../../assets/giraffe03.jpg"
+
+import img1 from "../../assets/event.jpg"
+import img2 from "../../assets/comrad.png"
+import img3 from "../../assets/kismet.png"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScroll, useTransform,motion } from 'framer-motion'
-import MouseWrapper from '../../Hooks/MouseWrapper'
 import Section from '../layout/Section'
 import GridColumn from '../layout/GridColumn'
 import SlideUpText from '@/effects/SlideUpText'
@@ -62,7 +66,7 @@ function Card({i,url,img,title,paragraph,targetScale,range,progress,color,bgColo
    const scaleCard = useTransform(progress, range, [1, targetScale]);
    return(   
       <div className='sticky top-0 h-80svh] w-[100%] flex items-center justify-center bg-slate600'>
-   <motion.div  key={i} ref={targetRef} style={{backgroundColor:bgColor,scale:scaleCard,y:`calc(6% + ${i*25}px)`}} className= 'px-4 pb-4 mx-auto w-[100%] rounded-3xl overflow-hidden noise h[88%]'>
+   <motion.div id={i==0?'projects':''} key={i} ref={targetRef} style={{backgroundColor:bgColor,scale:scaleCard,y:`calc(6% + ${i*25}px)`}} className= 'px-4 pb-4 mx-auto w-[100%] rounded-3xl overflow-hidden noise h[88%]'>
    <div  className='col-start-5 col-span-4 flex items-center justify-center p-6 bgslate-500  overflow-clip'>
    <h2 className='font-custom text-brand-black text-center text-heading2 leading-[.9]  '>
       <SlideUpText once={false} preLoaderOut text={title}/>

@@ -1,26 +1,17 @@
-import floating1 from './public/images/floating_1.jpg';
-import floating2 from './public/images/floating_2.jpg';
-import floating3 from './public/images/floating_3.jpg';
-import floating4 from './public/images/floating_4.jpg';
-import floating5 from './public/images/floating_5.jpg';
-import floating6 from './public/images/floating_6.jpg';
-import floating7 from './public/images/floating_7.jpg';
-import floating8 from './public/images/floating_8.jpg';
-import ele from './public/images/ele.jpg';
+
 import memet from './public/images/memet.jpg';
-import free from './public/images/free.jpg';
+// import memet from './public/images/memet2.png';
+import memet2 from './public/images/memet2.png';
+import memet3 from './public/images/memet3.png';
+import evepra from './public/images/evepra.png';
+import homestore from './public/images/homestore.png';
+import tour from './public/images/tour.png';
+import homely from './public/images/homely.png';
 
-
+const accent= '#8D8D57'
+const secondary= '#8D8D57'
 export { 
-    floating1, 
-    floating2, 
-    floating3, 
-    floating4, 
-    floating5, 
-    floating6, 
-    floating7, 
-    floating8,
-    free,
-    ele,
-    memet
+   
+   
+    memet,memet2,memet3,accent,secondary,evepra,homely,homestore, tour,
 }

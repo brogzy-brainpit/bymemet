@@ -7,6 +7,7 @@ import GridColumn from '@/app/layout/GridColumn';
 import TunderText from './TunderText';
 import MarqueeX from './MarqueeX';
 import SlideUpText from '@/effects/SlideUpText';
+import { navItems } from './Nav';
 // import { Mail, Phone } from 'lucide-react';
 
 
@@ -26,27 +27,17 @@ export default function Footer() {
             <GridColumn  className={'bg-brand-secondary p-5 rounded-3xl'}>
                <div className='col-start-1 col-span-5'>
                  <div className='flex items-start flex-col'>
+                  {navItems.map(({href,title})=>{
+                    return (
                   <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
                  className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
-                      <SlideUpText once={false} preLoaderOut  text='About'/>
+                      <Link href={href}>
+                      <SlideUpText once={false} preLoaderOut  text={title}/>
+                      </Link>
                   </motion.h2>
-                  
-                  <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
-                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
-                      <SlideUpText once={false} preLoaderOut  text='Blogs'/>
 
-                  </motion.h2>
-                  <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
-                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
-                      <SlideUpText once={false} preLoaderOut  text='Contact'/>
-
-                  </motion.h2>
-                 <motion.h2  whileHover={{x:6,opacity:.7,cursor:"pointer"}} 
-                 className='font-custom text-heading2 leading-[.8] tracking-wide font-bold text-brand-black text-left md:text-right'>
-                
-                      <SlideUpText once={false} preLoaderOut  text='Services'/>
-
-                  </motion.h2>
+                    )
+                  })}
                 </div>
                 </div>
 

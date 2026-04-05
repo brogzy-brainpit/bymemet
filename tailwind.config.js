@@ -24,7 +24,9 @@ module.exports = {
 
       },
         colors: {
-         'brand-accent':"rgb(116, 97, 195)", //accent for links, hover state 
+          
+        //  'brand-accent':"rgb(116, 97, 195)", //accent for links, hover state 
+         'brand-accent':"#8D8D57", //accent for links, hover state 
         'brand-secondaryx':"#FDEB87", //orange best
         'brand-secondary':"#FFB347", //blue best  #10B981
         'brand-white':"#FFFFFF", //blue best  #10B981
@@ -34,11 +36,11 @@ module.exports = {
       },
        fontSize:{
           //  'heading': 'clamp(4.2em, 12vw, 9em)',
-           'heading': 'clamp(5.8em, 14vw, 16em)',
-           'heading2': 'clamp(3.8em, 9vw, 9em)',
+           'heading': 'clamp(6.8em, 14vw, 16em)',
+           'heading2': 'clamp(4.8em, 9vw, 10em)',
            'heading3': 'clamp(1.5em, 2.4vw, 7.5em)',
            'display': 'clamp(130px, 33vw, 490px)',
-           'para': 'clamp(1.2em, 1vw, 1.4em)',
+           'para': 'clamp(1.1em, 1vw, 1.2em)',
         'button': 'clamp(14px, 3.5vw, 18px)',
       },
       fontFamily:{

@@ -1,6 +1,7 @@
+export const dynamic = "force-dynamic"
 import axios, { base } from '@/axios'
 import PageHeader from '../_components/PageHeader';
-// import SendEmail from '../_components/SendEmail';
+import SendEmail from '../_components/SendEmail';
 
 
 
@@ -64,12 +65,13 @@ async function getPublished() {
                   <p className='w-full text-[11px] p-[10px] absolute top-[0px] bg-[rgba(0,0,0,0.72)] h-full flex items-end'>{topic}</p>
                 </div> */}
         {templates.map(({img,name,tempId,newContent},index)=>{
-            return <div key={index} className='relative w-[140px] md:w-[200px] h-[400px] overflow-hidden '>
+          // console.log(newContent)
+            return <div key={tempId} className='relative w-[140px] md:w-[200px] h-[400px] overflow-hidden '>
                 <div className='w-full h-full overflow-hidden rounded-xl'>
                 <img className='object-cover' src={img}/>
                 </div>
                   {/* <div className='scale-0 overflow-hidden w-full text-[11px] p-[10px] gap-2 absolute top-[0px] flex flex-col bg-[rgba(91,90,90,0.72)] h-full items-center justify-center'> */}
-                 {/* <SendEmail newContent={newContent} /> */}
+                 <SendEmail name={name} newContent={newContent} />
                 {/* <div className='text-[#000000] gap-2 transition-transform duration-800 hover:shadow-md hover:scale-105 w-full h-full absolute top-0 left-0 hover:bg-[rgba(0,0,0,0.73)] flex flex-col justify-center items-center '>
                     <input className='input font-body w-[86%]'/>
                     <button className='btn font-body '>send</button>
