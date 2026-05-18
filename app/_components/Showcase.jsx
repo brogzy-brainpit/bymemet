@@ -10,7 +10,7 @@ import img3 from "../../assets/kismet.png"
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useScroll, useTransform,motion } from 'framer-motion'
+import { useScroll, useTransform,motion, useSpring } from 'framer-motion'
 import Section from '../layout/Section'
 import GridColumn from '../layout/GridColumn'
 import SlideUpText from '@/effects/SlideUpText'
@@ -29,7 +29,6 @@ const Service=()=>{
      target: containerRef,
      offset:['start start','end end']
    });  
-
     return(
        <div ref={containerRef} className={'mb-[25vh]'}>
          <Section padding className={'px5 bg-red800 relative flex justify-center items-center gap-10 flex-col'}>
@@ -56,12 +55,13 @@ const Service=()=>{
 export default Showcase
 
 function Card({i,url,img,title,paragraph,targetScale,range,progress,color,bgColor}) {
+const MotionImage=motion(Image)
    const targetRef = useRef(null);
    const { scrollYProgress:scaleCardImage} = useScroll({
      target: targetRef,
      offset:['start end','start start']
    });
-   const scale = useTransform(scaleCardImage, [0, 1], [1.3, 1]);
+   const scale = useSpring(useTransform(scaleCardImage, [0, 1], [1.3, 1]),{stiffness:280,damping:50});
 
    const scaleCard = useTransform(progress, range, [1, targetScale]);
    return(   
@@ -69,13 +69,14 @@ function Card({i,url,img,title,paragraph,targetScale,range,progress,color,bgColo
    <motion.div id={i==0?'projects':''} key={i} ref={targetRef} style={{backgroundColor:bgColor,scale:scaleCard,y:`calc(6% + ${i*25}px)`}} className= 'px-4 pb-4 mx-auto w-[100%] rounded-3xl overflow-hidden noise h[88%]'>
    <div  className='col-start-5 col-span-4 flex items-center justify-center p-6 bgslate-500  overflow-clip'>
    <h2 className='font-custom text-brand-black text-center text-heading2 leading-[.9]  '>
-      <SlideUpText once={false} preLoaderOut text={title}/>
+        {/* {title} */}
+        <SlideUpText preLoaderOut  text={title} margin='-140px' />
       </h2>
       </div>
   <GridColumn className={' h-fll'}>
    <div  className='col-start-1 col-span-6 p-  overflow-hidden rounded-3xl bg-slate-500'>
-    <Link href={url} className='h-auto w-1/2 overflow-hidden'>
-    <motion.img style={{scale}} src={img} alt="Property" className="object-cover aspect-[7/4]  h-full w-full grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"/>
+    <Link href={url} className='h-auto w-1/2 relative overflow-hidden'>
+    <MotionImage width={400}  height={400} style={{scale}} src={img} alt="Property" className="object-cover aspect-[7/4]  h-full w-full  "/>
     </Link>
    </div>
    <div  className='py-4 col-span-6 overflow-hidden'>

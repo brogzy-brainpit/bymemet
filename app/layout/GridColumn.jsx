@@ -20,18 +20,18 @@ function GridColumn({ children,gridLines=false, className }) {
         className
       )}
     >
-      <div className="col-span-1 h-full bg-slate-600/20">dd</div>
-      <div className="col-span-1 h-full bg-slate-600/20">aa</div>
-      <div className="col-span-1 h-full bg-slate-600/20"></div>
-      <div className="col-span-1 h-full bg-slate-600/20"></div>
-      <div className="col-span-1 h-full bg-slate-600/20"></div>
-      <div className="col-span-1 h-full bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
-      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"></div>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
+      <div className="col-span-1 h-full lg:block hidden bg-slate-600/20"/>
     </div>
      
     

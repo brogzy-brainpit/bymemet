@@ -619,7 +619,6 @@ body {
 
 
 .trial-items{
-  background: #23263A;
   padding: 8px 30px;
   list-style: none;
   display: inline-block;
@@ -638,7 +637,6 @@ body {
 .trial-items ul li {
   position: relative;
   float: left;
-  color: #ddd;
 }
 .trial-items ul .linkOne::before {
   position: absolute;
